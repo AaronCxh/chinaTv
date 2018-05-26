@@ -2034,6 +2034,17 @@ a:focus{
   font-size: 15px;
   color: #464646;
 }
+.ctv-index-footer-share{
+  margin-top: 22px;
+  .bshare-custom{
+    font-size: 0;
+    text-align: center;
+  }
+  a{
+    display: inline-block;
+    margin: 0 9px;
+  }
+}
 /* ctv-index-footer */
 
 
