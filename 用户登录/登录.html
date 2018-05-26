@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <link rel="stylesheet" href="../css/ui2.css">
+    <link rel="stylesheet" href="../css/user.css">
+    <style lang="">
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <a class="header-logo" href="../首页.html">
+                <div class="image">
+                    <img src="../images/图像/footer-logo_03.png" alt="">
+                </div>
+                <p class="header-text">中国微卫视登录界面</p>
+            </a>
+        </div>
+    </div>
+    <div class="main">
+        <div class="banner" style="background-image: url('../images/图像/logInbanner_01.jpg');filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/图像/logInbanner_01.jpg',sizingMethod='scale');  ">
+            <div class="outside-wrapper">
+                <div class="logIn-wrapper">
+                    <div class="logIn-header">
+                        欢迎您登录中国卫视!
+                    </div>
+
+                    <div class="logIn-body">
+                        <form action="">
+                            <div class="form-group">
+                                <span class="iconfont">&#xe7ad;</span>
+                                <input type="text" placeholder="邮箱/手机/用户名" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <span class="iconfont">&#xe626;</span>
+                                <input type="text" placeholder="请输入登录密码" class="form-control">
+                            </div>
+
+                            <div class="remember clearfix">
+                                <label for="remenberUser" class="remenberLabel">
+                                    <input type="checkbox" id="remenberUser">记住用户名
+                                </label>
+                                <a href="./找回密码.html" class="forgetpassword">忘记密码？</a>
+                            </div>
+
+                            <div class="btn-wrapper">
+                                <input class="submitBtn" type="submit" value="立即登录">
+                            </div>
+                        </form>
+                        <!-- 第三方登录 -->
+                        <div class="login-other-wapper">
+                            <div class="login-other-text">第三方账号登录，没有账号？
+                                <a href="#">免费注册</a>
+                            </div>
+                            <ul class="login-other clearfix">
+                                <li class="wechat">
+                                    <a href="#">
+                                        <img src="../images/图像/iconpng_03.png" alt="">
+                                    </a>
+                                </li>
+                                <li class="circle">
+                                    <a href="#">
+                                        <img src="../images/图像/iconpng_04.png" alt="">
+                                    </a>
+                                </li>
+                                <li class="qq">
+                                    <a href="#">
+                                        <img src="../images/图像/iconpng_05.png" alt="">
+                                    </a>
+                                </li>
+                                <li class="qqzone">
+                                    <a href="#">
+                                        <img src="../images/图像/iconpng_06.png" alt="">
+                                    </a>
+                                </li>
+                                <li class="weibo">
+                                    <a href="#">
+                                        <img src="../images/图像/iconpng_07.png" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 第三方登录 -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">中国卫视</a>
+                <a href="#">资讯中心</a>
+                <a href="#">项目信息</a>
+                <a href="#">主营业务</a>
+                <a href="#">关于我们</a>
+            </div>
+            <div class="adress-info">
+                中国卫视
+                <span>地址：北京市朝阳区北辰东路8号汇园公寓P908</span>
+            </div>
+            <div class="connect-info">
+                <span>栏目热线：010-65170959</span>
+                <span>邮箱：V-CCTV@163.com</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title " id="myModalLabel">
+                        学子家园用户使用协议
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        第一条 本站服务</p>
+                    <p>
+                        1自找通过互联网依法为用户提供互联网信息等服务，用户在完全同意本协议及本站规定的情况下，方有权使用本站的相关服务。</p>
+                    <p>
+                        2用户必须自行准备如下设备和承担如下开支：（1）上网设备，包括并不限于电脑或者其他上网终端、调制解调器及其他必备的上网装置；（2）上网开支，包括并不限于网络接入费、上网设备租用费、手机流量费等。</p>
+                    <p>
+                        第二条 用户信息</p>
+                    <p>
+                        1用户应自行诚信向本站提供注册资料，用户同意其提供的注册资料真实、准确、完整、合法有效，用户注册资料如有变动的，应及时更新其注册资料。如果用户提供的注册资料不合法、不真实、不准确、不详尽的，用户需承担因此引起的相应责任及后果，并且京东保留终止用户使用京东各项服务的权利。</p>
+                    <p>
+                        2用户在本站进行浏览、下单购物等活动时，涉及用户真实姓名/名称、通信地址、联系电话、电子邮箱等隐私信息的，本站将予以严格保密，除非得到用户的授权或法律另有规定，本站不会向外界披露用户隐私信息。</p>
+                    <p>
+                        3用户注册成功后，将产生用户名和密码等账户信息，您可以根据本站规定改变您的密码。用户应谨慎合理的保存、使用其用户名和密码。用户若发现任何非法使用用户账号或存在安全漏洞的情况，请立即通知本站并向公安机关报案。</p>
+
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-default" data-dismiss="modal" value="同意并继续">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+
+    <script src="../js/jquery-1.11.0.js"></script>
+    <script src="../js/modal.js"></script>
+</body>
+
+</html>

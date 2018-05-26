@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <link rel='icon' href=''>
+  <link rel='stylesheet' href='./css/ui2.css'>
+  <link rel="stylesheet" href="./css/iconfont.css">
+  <link rel='stylesheet' href='./css/main.css'>
+  <style>
+    .my-map {
+      margin: 0 auto;
+      width: 570px;
+      height: 440px;
+    }
+
+    .my-map .icon {
+      background: url(http://lbs.amap.com/console/public/show/marker.png) no-repeat;
+    }
+
+    .my-map .icon-cir {
+      height: 31px;
+      width: 28px;
+    }
+
+    .my-map .icon-cir-red {
+      background-position: -11px -5px;
+    }
+
+    .amap-container {
+      height: 100%;
+    }
+
+    .amap-info-content h3 {
+      font-size: 12px !important;
+      font-weight: bold;
+    }
+
+    .amap-info-content div {
+      font-size: 12px;
+      color: #999;
+    }
+  </style>
+
+  <!-- 分享 -->
+  <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+  <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+  <!-- 分享 -->
+  <title>关于我们</title>
+</head>
+
+<body>
+
+  <div class="promo">
+    <div class="promo-place">
+      <a target="_self" href="#">
+        <img src="./images/guaogao_03.jpg">
+      </a>
+    </div>
+
+  </div>
+
+  <div class='header'>
+
+    <!-- 卫视菜单 -->
+    <div class="header-schedule short">
+
+      <div class="logIn_bar">
+        <div class="container">
+          <div class="logIn">
+            <i class="iconfont">&#xe61b;</i>
+            <a href="/user/profile" class="user_name">登录</a>
+            <span>|</span>
+            <a href="/user/logout">注册</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 左边 -->
+      <a href="#" class="previous">
+        <div class="card">
+          <div class="splash">
+            <div class="image themed themed-splash theme-" style="background-image: url(https://static.1tv.ru/uploads/photo/image/5/little/1475_little_802276f7d8.jpg)"></div>
+            <div class="info">
+              <div class="time">11:40</div>
+              <div class="time-label">正在播出</div>
+            </div>
+          </div>
+          <div class="text">
+            <div class="wrapper">
+              <div class="title">标题标题</div>
+              <div class="age"></div>
+            </div>
+            <button class="itv-button play">
+              <span class="iconfont icon-button-play "></span>在线观看</button>
+          </div>
+          <div class="synchronization">
+            <b>CHNTV</b>&nbsp;
+            <i>24小时</i>同步播出</div>
+        </div>
+      </a>
+      <!-- 左边 -->
+
+      <!-- 右边 -->
+      <div class="next">
+        <div class="card">
+
+          <!-- 语言切换 -->
+          <div class="land hover-item">
+            <span class="hover-title">
+              <i class="anticon">&#xe6f1;</i> &nbsp;语种&nbsp;
+              <i class="anticon">&#xe606;</i>
+            </span>
+            <div class="hover-panel">
+              <div class="box-info">
+                <span class="box-info-item">
+                  <a class="a-link">简体</a>
+                </span>
+                <span class="box-info-item">
+                  <a class="a-link">繁体</a>
+                </span>
+                <span class="box-info-item">
+                  <a class="a-link">英语</a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- 语言切换 -->
+
+
+          <!-- 分享 -->
+          <div class="header_share hover-item">
+            <span class="hover-title">
+              <i class="anticon">&#xe671;</i>分享</span>
+            <div class="hover-panel">
+              <div class="box-info">
+                <span class="box-info-item">
+                  <a class="a-link">微博</a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- 分享 -->
+
+          <div class="splash">
+            <div class="image themed themed-splash theme-" style="background-image: url(https://static.1tv.ru/uploads/photo/image/5/little/1475_little_802276f7d8.jpg)"></div>
+            <div class="info">
+              <div class="time">11:40</div>
+              <div class="time-label">即将播出</div>
+            </div>
+          </div>
+          <div class="text">
+            <div class="wrapper">
+              <div class="title">标题标题</div>
+              <div class="age"></div>
+            </div>
+          </div>
+        </div>
+
+        <button class="index-schedule-arrow" data-role="toggle"></button>
+      </div>
+
+
+      <!-- 右边 -->
+    </div>
+    <!-- 卫视菜单 -->
+
+    <div class="header-navbar">
+      <div class="container">
+        <div class="header-logo">
+          <a href="./index.html">
+            <img src="./images/logo.png" alt="">
+          </a>
+        </div>
+
+        <ul class="navbar">
+          <li>
+            <a href="#">资讯</a>
+          </li>
+          <li>
+            <a href="#">频道</a>
+          </li>
+          <li>
+            <a href="#">节目</a>
+          </li>
+          <li>
+            <a href="#">电影 · 电视剧</a>
+          </li>
+          <li>
+            <a href="#">纪录片</a>
+          </li>
+          <li>
+            <a href="#">少儿</a>
+          </li>
+          <li>
+            <a href="#">VR</a>
+          </li>
+          <li>
+            <a href="#">节目预算</a>
+          </li>
+          <li>
+            <a href="#">直播</a>
+          </li>
+        </ul>
+
+
+        <div class="header-search">
+          <div class="search-wrapper">
+            <form>
+              <input type="text" class="form-control" placeholder="输入搜索关键词" name="search">
+              <button class="after-icon anticon">&#xe670;</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- banner -->
+  <div class="level_banner" style="background-image: url('./images/关于我们_02.jpg');filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=./images/关于我们_02.jpg,sizingMethod='scale');">
+  </div>
+  <!-- banner -->
+
+  <div class='main'>
+
+    <div class="breadcrumb-wrapper">
+      <div class="container">
+
+        <div class="breadcrumb-group clearfix">
+          <a href="#" class="home">
+            <i class="iconfont">&#xe602;</i>
+          </a>
+          <ul class="breadcrumb">
+            <li>
+              <a href="#">首页</a>
+            </li>
+            <li>
+              <span>CHNTV中国卫视</span>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="link-group clearfix">
+          <li class="active">
+            <a href="#">CHNTV中国卫视</a>
+          </li>
+          <li>
+            <a href="#">广告服务</a>
+          </li>
+          <li>
+            <a href="#">诚征英才</a>
+          </li>
+          <li>
+            <a href="#">保护隐私权</a>
+          </li>
+          <li>
+            <a href="#">免责条款</a>
+          </li>
+          <li>
+            <a href="#">意见反馈</a>
+          </li>
+          <li>
+            <a href="#">记者证查询</a>
+          </li>
+
+          <span class="line" style="left: 0;">
+
+          </span>
+
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="section">
+
+      <div class="company-intro">
+        <div class="container">
+          <div class="item">
+            <div class="image">
+              <img src="./images/关于我们_05.jpg" alt="">
+            </div>
+            <div class="con">
+              <h1 class="name">中国卫视控股有限公司</h1>
+              <div class="content">
+                <p>
+                  中国卫视控股有限公司（简称t中国卫视）诞生于2017年11月10日，是集卫星电视、宽频网络、有线电视和影视剧制作为一体的全球性传媒集团。经香港特别行政区批准注册成立备案中央人民政府驻香港特别行政区联络办公室。
+                </p>
+                <br>
+                <p>
+                  中国卫视以24小时开路不加密的方式，通过老挝一号卫星、亚太五号卫星CombosTV直播系统、美国DISHNETWORK卫星直播系统、亚洲4号卫星DISH ASIA HD卫星直播系统，覆盖亚太地区和北美地区。通过宽频电视网覆盖全球有互联网的国家与地区、通过美国CHAMPION有线电视网、台艺台有线电视网覆盖美国加州和台湾全岛。通过香港NowTV有线频道进入香港居民家庭用户、通过国内有线电视网逐步落地国内部分省区，信号覆盖人口超过40亿。
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+
+
+      <div class="adress-intro" style="background-image: url('./images/关于我们_08.jpg');filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=./images/关于我们_08.jpg,sizingMethod='scale');">
+        <div class="container">
+          <div class="box">
+
+            <div class="text-con">
+              <h1 class="title">联系我们</h1>
+              <h2 class="name">中国卫视控股有限公司</h2>
+
+              <div class="edit">
+                <p>电话：0795-82864598</p>
+                <br><br>
+                <p>
+                  地址：广东省深圳市福田区八卦四路先科集团大院2栋东面203室
+                </p>
+                <p>
+                  交通：乘坐地铁7号线至红岭北地铁站A出口，直走150米左转
+                </p>
+
+
+                <p>
+                  <img src="./images/关于我们_03.jpg" alt="">
+                </p>
+              </div>
+
+
+            </div>
+
+            <div class="map-content">
+              <!-- comp-map -->
+              <div id="wrap" class="my-map">
+                <div id="mapContainer"></div>
+              </div>
+              <!-- comp-map end -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class='footer'>
+    <div class="container">
+      <div class="footer-code">
+        <img src="./images/关于我们_03.png" alt="">
+      </div>
+      <div class="footer-con">
+
+        <ul class="f_list">
+          <li class="first">
+            <a href="#">CHNTV中国卫视</a>
+          </li>
+          <li>
+            <a href="#">广告服务</a>
+          </li>
+          <li>
+            <a href="#">诚征英才</a>
+          </li>
+          <li>
+            <a href="#">保护隐私权 </a>
+          </li>
+          <li>
+            <a href="#">免责条款</a>
+          </li>
+          <li>
+            <a href="#">意见反馈</a>
+          </li>
+          <li>
+            <a href="#">记者证查询</a>
+          </li>
+        </ul>
+
+        <ul class="a_list">
+          <li>
+            <span>地址：广东省深圳市福田区八卦四路先科集团大院2栋东面203室</span>
+          </li>
+          <li>
+            <span>电话：0795-82864598</span>
+          </li>
+          <li>
+            <span>邮箱：454910408@qq.com</span>
+          </li>
+        </ul>
+
+        <div class="b_con">
+
+          <div class="icq">
+            CHN TV中国卫视 版权所有 备案/许可编号：京 ICP 备 17055568 号
+          </div>
+
+          <div class="footer-share">
+            <!-- <div class="bshare-custom">
+              <div class="bsPromo bsPromo2"></div>
+              <a title="分享到QQ好友" class="bshare-qqim" href="javascript:void(0);">QQ好友</a>
+              <a title="分享到QQ空间" class="bshare-qzone">QQ空间</a>
+              <a title="分享到微信" class="bshare-weixin" href="javascript:void(0);">微信</a>
+              <a title="分享到新浪微博" class="bshare-sinaminiblog">新浪微博</a>
+              <a title="分享到腾讯微博" class="bshare-qqmb">腾讯微博</a>
+            </div> -->
+
+            <div class="bshare-custom">
+              <a title="分享到QQ好友" class="bshare-qqim" href="javascript:void(0);" style="background-image: url('./images/关于我们_06.png')"></a>
+              <a title="分享到QQ空间" class="bshare-qzone" style="background-image: url('./images/关于我们_08.png')"></a>
+              <a title="分享到微信" class="bshare-weixin" style="background-image: url('./images/关于我们_10.png')"></a>
+              <a htitle="分享到新浪微博" class="bshare-sinaminiblog" style="background-image: url('./images/关于我们_12.png')"></a>
+              <a title="分享到腾讯微博" class="bshare-qqmb" style="background-image: url('./images/关于我们_14.png')"></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.0&amp;key=4bb59a72a0e53750a40fe7e0df519ef6"></script>
+  <script src='./js/jquery-1.11.0.js'></script>
+  <script src='./js/main.js'></script>
+
+
+  <script>
+    !function () {
+
+      var infoWindow, map, level = 16,
+        center = { lng: 114.040474, lat: 22.613678 },
+        features = [{ type: "Marker", name: "深圳市联华网络", desc: "深圳市龙华区民康路蓝坤大厦1516", color: "red", icon: "cir", offset: { x: -9, y: -31 }, lnglat: { lng: 114.040506, lat: 22.613222 } }];
+
+
+
+
+
+      function loadFeatures() {
+        for (var feature, data, i = 0, len = features.length, j, jl, path; i < len; i++) {
+          data = features[i];
+          switch (data.type) {
+            case "Marker":
+              feature = new AMap.Marker({
+                map: map, position: new AMap.LngLat(data.lnglat.lng, data.lnglat.lat),
+                zIndex: 3, extData: data, offset: new AMap.Pixel(data.offset.x, data.offset.y), title: data.name,
+                content: '<div class="icon icon-' + data.icon + ' icon-' + data.icon + '-' + data.color + '"></div>'
+              });
+              break;
+            case "Polyline":
+              for (j = 0, jl = data.lnglat.length, path = []; j < jl; j++) {
+                path.push(new AMap.LngLat(data.lnglat[j].lng, data.lnglat[j].lat));
+              }
+              feature = new AMap.Polyline({
+                map: map, path: path, extData: data, zIndex: 2,
+                strokeWeight: data.strokeWeight, strokeColor: data.strokeColor, strokeOpacity: data.strokeOpacity
+              });
+              break;
+            case "Polygon":
+              for (j = 0, jl = data.lnglat.length, path = []; j < jl; j++) {
+                path.push(new AMap.LngLat(data.lnglat[j].lng, data.lnglat[j].lat));
+              }
+              feature = new AMap.Polygon({
+                map: map, path: path, extData: data, zIndex: 1,
+                strokeWeight: data.strokeWeight, strokeColor: data.strokeColor, strokeOpacity: data.strokeOpacity,
+                fillColor: data.fillColor, fillOpacity: data.fillOpacity
+              });
+              break;
+            default: feature = null;
+          }
+          if (feature) { AMap.event.addListener(feature, "click", mapFeatureClick); }
+        }
+      }
+
+      function mapFeatureClick(e) {
+        if (!infoWindow) { infoWindow = new AMap.InfoWindow({ autoMove: true }); }
+        var extData = e.target.getExtData();
+        infoWindow.setContent("<h5>" + extData.name + "</h5><div class='info-box'>" + "" + extData.desc + "<br>电话：010-64733333<br>" + "</div>");
+        infoWindow.open(map, e.lnglat);
+      }
+      // mapFeatureClick();
+      map = new AMap.Map("mapContainer", { center: new AMap.LngLat(center.lng, center.lat), level: level });
+
+      loadFeatures();
+
+      map.on('complete', function () {
+        map.plugin(["AMap.ToolBar", "AMap.Scale"], function () {
+          map.addControl(new AMap.ToolBar);
+          map.addControl(new AMap.Scale);
+        });
+      })
+
+    }();
+  </script>
+</body>
+
+</html>
