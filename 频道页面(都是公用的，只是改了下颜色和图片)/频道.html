@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <link rel='icon' href=''>
+  <link rel='stylesheet' href='../css/ui2.css'>
+  <link rel="stylesheet" href="../css/iconfont.css">
+  <link rel='stylesheet' href='../css/main.css'>
+  <title>频道</title>
+
+  <style>
+    .page-recommend-list .item{
+      background: #7e9357;
+      transition: all 0.3s;
+
+    }
+    .page-recommend-list .item:hover{
+      background: #677b44;
+    
+    }
+
+    .page-recommend-list .item .hoverable{
+      position: absolute;
+      padding: 18px 15px 18px;
+      height: 150px;
+      overflow: hidden;
+      top: 156px;
+      background-color: #7e9357;
+      color: #bfd0a0;
+      left: 0;
+      right: 0;
+      transition: all 0.3s;
+    }
+    .page-recommend-list .item .text::after{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      bottom: -1px;
+      box-shadow: 0 0 20px 20px;
+      -webkit-transition: all 200ms;
+      transition: all 200ms;
+      color: #7e9357;
+    }
+    .page-recommend-list .item:hover .text::after{
+      display: none;
+    }
+    .page-recommend-list .item:hover .text{
+      top: 0;
+      height: 310px;
+      background: #677b44;;
+    }
+ 
+
+    .page-recommend-list .item .hoverable .title{
+      color: #bfd0a0;
+      font-size: 16px;
+      font-family:MicrosoftYaHei-Bold;
+      font-weight: 700;
+      margin-bottom: 14px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1.2;
+    }
+    .page-recommend-list .item .hoverable .info{
+      font-size: 12px;
+      color: #bfd0a0;
+      margin-bottom: 14px;
+    }
+    .page-recommend-list .item .hoverable .summary{
+      color: #bfd0a0;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="promo">
+    <div class="promo-place">
+      <a target="_self" href="#">
+        <img src="../images/guaogao_03.jpg">
+      </a>
+    </div>
+
+  </div>
+
+  <div class='header'>
+
+    <!-- 卫视菜单 -->
+    <div class="header-schedule short">
+
+      <div class="logIn_bar">
+        <div class="container">
+          <div class="logIn">
+            <i class="iconfont">&#xe61b;</i>
+            <a href="/user/profile" class="user_name">登录</a>
+            <span>|</span>
+            <a href="/user/logout">注册</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 左边 -->
+      <a href="#" class="previous">
+        <div class="card">
+          <div class="splash">
+            <div class="image themed themed-splash theme-" style="background-image: url(https://static.1tv.ru/uploads/photo/image/5/little/1475_little_802276f7d8.jpg)"></div>
+            <div class="info">
+              <div class="time">11:40</div>
+              <div class="time-label">正在播出</div>
+            </div>
+          </div>
+          <div class="text">
+            <div class="wrapper">
+              <div class="title">标题标题</div>
+              <div class="age"></div>
+            </div>
+            <button class="itv-button play">
+              <span class="iconfont icon-button-play "></span>在线观看</button>
+          </div>
+          <div class="synchronization">
+            <b>CHNTV</b>&nbsp;
+            <i>24小时</i>同步播出</div>
+        </div>
+      </a>
+      <!-- 左边 -->
+
+      <!-- 右边 -->
+      <div class="next">
+        <div class="card">
+
+          <!-- 语言切换 -->
+          <div class="land hover-item">
+            <span class="hover-title">
+              <i class="anticon">&#xe6f1;</i> &nbsp;语种&nbsp;
+              <i class="anticon">&#xe606;</i>
+            </span>
+            <div class="hover-panel">
+              <div class="box-info">
+                <span class="box-info-item">
+                  <a class="a-link">简体</a>
+                </span>
+                <span class="box-info-item">
+                  <a class="a-link">繁体</a>
+                </span>
+                <span class="box-info-item">
+                  <a class="a-link">英语</a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- 语言切换 -->
+
+
+          <!-- 分享 -->
+          <div class="header_share hover-item">
+            <span class="hover-title">
+              <i class="anticon">&#xe671;</i>分享</span>
+            <div class="hover-panel">
+              <div class="box-info">
+                <span class="box-info-item">
+                  <a class="a-link">微博</a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- 分享 -->
+
+          <div class="splash">
+            <div class="image themed themed-splash theme-" style="background-image: url(https://static.1tv.ru/uploads/photo/image/5/little/1475_little_802276f7d8.jpg)"></div>
+            <div class="info">
+              <div class="time">11:40</div>
+              <div class="time-label">即将播出</div>
+            </div>
+          </div>
+          <div class="text">
+            <div class="wrapper">
+              <div class="title">标题标题</div>
+              <div class="age"></div>
+            </div>
+          </div>
+        </div>
+
+        <button class="index-schedule-arrow" data-role="toggle"></button>
+      </div>
+
+
+      <!-- 右边 -->
+    </div>
+    <!-- 卫视菜单 -->
+
+    <div class="header-navbar">
+      <div class="container">
+        <div class="header-logo">
+          <a href="../index.html">
+            <img src="../images/logo.png" alt="">
+          </a>
+        </div>
+
+        <ul class="navbar">
+          <li class="active">
+            <a href="#">资讯</a>
+          </li>
+          <li class="hover-item">
+            <a href="#">频道</a>
+            <div class="hover-panel">
+              <div class="container">
+                <ul class="down-sub-menu">
+                  <li>
+                    <a href="#">旅游</a>
+                  </li>
+                  <li>
+                    <a href="#">文化</a>
+                  </li>
+                  <li>
+                    <a href="#">财经</a>
+                  </li>
+                  <li>
+                    <a href="#">科技</a>
+                  </li>
+                  <li>
+                    <a href="#">体育</a>
+                  </li>
+                  <li>
+                    <a href="#">综艺</a>
+                  </li>
+                  <li>
+                    <a href="#">时尚</a>
+                  </li>
+                  <li>
+                    <a href="#">电影 · 电视剧 节目</a>
+                  </li>
+                  <li>
+                    <a href="#">少儿</a>
+                  </li>
+                  <li>
+                    <a href="#">军事</a>
+                  </li>
+                  <li>
+                    <a href="#">国学</a>
+                  </li>
+                  <li>
+                    <a href="#">佛教</a>
+                  </li>
+                  <li>
+                    <a href="#">公益</a>
+                  </li>
+                  <li>
+                    <a href="#">VR</a>
+                  </li>
+                  <li>
+                    <a href="#">直播</a>
+                  </li>
+                  <li>
+                    <a href="#">中国剧场</a>
+                  </li>
+                </ul>
+              </div>
+              <hr class="fat">
+            </div>
+          </li>
+          <li>
+            <a href="#">节目</a>
+          </li>
+          <li>
+            <a href="#">电影 · 电视剧</a>
+          </li>
+          <li>
+            <a href="#">纪录片</a>
+          </li>
+          <li>
+            <a href="#">少儿</a>
+          </li>
+          <li>
+            <a href="#">VR</a>
+          </li>
+          <li>
+            <a href="#">节目预算</a>
+          </li>
+          <li>
+            <a href="#">直播</a>
+          </li>
+        </ul>
+
+
+        <div class="header-search">
+          <div class="search-wrapper">
+            <form>
+              <input type="text" class="form-control" placeholder="输入搜索关键词" name="search">
+              <button class="after-icon anticon">&#xe670;</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class='main'>
+
+    <!-- 频道主体 -->
+    <div class="brandable themed">
+
+      <!-- 该页面的颜色-背景-边框颜色 -->
+      <div class="branding_promo_place">
+        <div class="branding-offset" style="height: 350px;"></div>
+        <!-- 背景颜色 -->
+        <div class="branding" style="background-color: #71894b;">
+          <img src="../images/公益页面_02.jpg" alt="">
+        </div>
+        <!-- 背景颜色 -->
+
+        <!-- 边框的颜色 -->
+        <div class="branding-frame" style="background-color: #628133;"></div>
+        <!-- 边框的颜色 -->
+
+      </div>
+      <!-- 该页面的颜色-背景-边框颜色 -->
+
+      <!-- 内容部分 -->
+      <div class="show-main branded">
+        <!-- 头部颜色，字体颜色 -->
+        <header class="page-title" id="page-header" style="background-color: #8a9f63;color: #cddbb2">
+          <div class="page-logo">
+            <img src="../images/公益页面_04.png" alt="">
+            <span class="page-info" style="color: #a7b985;">周六 23 : 00</span>
+          </div>
+
+          <div class="page-menu">
+            <ul class="clearfix">
+              <li>
+                <a href="#">资讯</a>
+              </li>
+              <li>
+                <a href="#">佛教常识</a>
+              </li>
+              <li>
+                <a href="#">般若讲堂</a>
+              </li>
+              <li>
+                <a href="#">素食禅茶</a>
+              </li>
+              <li>
+                <a href="#">佛教故事</a>
+              </li>
+              <li>
+                <a href="#">佛事专题</a>
+              </li>
+            </ul>
+          </div>
+
+        </header>
+
+        <!-- 边框 -->
+        <hr class="fat" style="background-color: #7b9152;">
+        <!-- 边框End -->
+
+        <!-- 内容部分 -->
+        <!-- 背景颜色，字体颜色 -->
+        <div class="page-content--themed" style="background-color: #8a9f63;">
+
+          <div class="page-content">
+            <!-- 视频播放 -->
+            <div class="player-wrapper">
+              <div class="player"></div>
+
+              <div class="player-list">
+                <a href="#" class="item">
+                  <div class="image" style="background-image: url('../images/公益页面_03.png')"></div>
+                  <div class="text">
+                    为什么日本没有像中国那样大量地制造手机，尽管日本在...
+                  </div>
+                </a>
+                <a href="#" class="item">
+                  <div class="image" style="background-image: url('../images/公益页面_03.png')"></div>
+                  <div class="text">
+                    为什么日本没有像中国那样大量地制造手机，尽管日本在...
+                  </div>
+                </a>
+                <a href="#" class="item">
+                  <div class="image" style="background-image: url('../images/公益页面_03.png')"></div>
+                  <div class="text">
+                    为什么日本没有像中国那样大量地制造手机，尽管日本在...
+                  </div>
+                </a>
+                <a href="#" class="item">
+                  <div class="image" style="background-image: url('../images/公益页面_03.png')"></div>
+                  <div class="text">
+                    为什么日本没有像中国那样大量地制造手机，尽管日本在...
+                  </div>
+                </a>
+                <a href="#" class="item">
+                  <div class="image" style="background-image: url('../images/公益页面_03.png')"></div>
+                  <div class="text">
+                    为什么日本没有像中国那样大量地制造手机，尽管日本在...
+                  </div>
+                </a>
+                <a href="#" class="item">
+                  <div class="image" style="background-image: url('../images/公益页面_03.png')"></div>
+                  <div class="text">
+                    为什么日本没有像中国那样大量地制造手机，尽管日本在...
+                  </div>
+                </a>
+                <a href="#" class="item">
+                  <div class="image" style="background-image: url('../images/公益页面_03.png')"></div>
+                  <div class="text">
+                    为什么日本没有像中国那样大量地制造手机，尽管日本在...
+                  </div>
+                </a>
+                <a href="#" class="item">
+                  <div class="image" style="background-image: url('../images/公益页面_03.png')"></div>
+                  <div class="text">
+                    为什么日本没有像中国那样大量地制造手机，尽管日本在...
+                  </div>
+                </a>
+
+              </div>
+            </div>
+            <!-- 视频播放End -->
+
+            <!-- 视频推荐 -->
+            <div class="page-recommend">
+              <h1 class="title" style="color: #cddbb2">最新推荐</h1>
+
+              <div class="page-recommend-list">
+                <ul class="clearfix">
+                  <li>
+                    <a href="#" class="item">
+                      <div class="image">
+                        <img src="../images/公益页面_11.png" alt="">
+                      </div>
+                      <div class="starts">
+
+                      </div>
+                      <div class="play-icon"></div>
+                      <div class="text hoverable">
+                        <div class="title">
+                          是充电一夜对手机损害大还是电量...
+                        </div>
+                        <div class="info">2018-04-12</div>
+                        <div class="summary">
+                          大家可能还不太清楚，现在智能手机，充电时间最长的也大部分在三个小时之内就可以将电池电量完全充满...
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="item" >
+                      <div class="image">
+                        <img src="../images/公益页面_11.png" alt="">
+                      </div>
+                      <div class="starts">
+
+                      </div>
+                      <div class="play-icon"></div>
+                      <div class="text hoverable">
+                        <div class="title">
+                          是充电一夜对手机损害大还是电量...
+                        </div>
+                        <div class="info">2018-04-12</div>
+                        <div class="summary">
+                          大家可能还不太清楚，现在智能手机，充电时间最长的也大部分在三个小时之内就可以将电池电量完全充满...
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- 视频推荐End -->
+          </div>
+
+        </div>
+
+        <!-- 内容部分 -->
+
+      </div>
+      <!-- 内容部分 -->
+
+
+    </div>
+    <!-- 频道主体 -->
+
+
+
+
+
+
+
+
+    <!-- 中间广告 -->
+    <dir class="middle-promo">
+      <a href="#">
+        <img src="../images/广告1.jpg">
+      </a>
+      <a href="#">
+        <img src="../images/广告2.jpg">
+      </a>
+    </dir>
+    <!-- 中间广告 -->
+
+    <!-- 文本广告 -->
+    <div class="text-promo">
+
+      <div class="container">
+        <div class="cards text-promo-swiper">
+          <a target="_blank" href="#" class="card">
+            <div class="title">国内首家“无人银行”亮相上海 智能机器人担任大堂经理</div>
+            <div class="time">2018-04-12</div>
+            <div class="summary">银行九江路支行将其一层打造成“无人银行”，成为国内首个无人银行网点。机器人大堂经理正在通过语音交流引导顾客办理业务</div>
+          </a>
+          <a target="_blank" href="#" class="card">
+            <div class="title">国内首家“无人银行”亮相上海 智能机器人担任大堂经理</div>
+            <div class="time">2018-04-12</div>
+            <div class="summary">银行九江路支行将其一层打造成“无人银行”，成为国内首个无人银行网点。机器人大堂经理正在通过语音交流引导顾客办理业务</div>
+          </a>
+          <a target="_blank" href="#" class="card">
+            <div class="title">国内首家“无人银行”亮相上海 智能机器人担任大堂经理</div>
+            <div class="time">2018-04-12</div>
+            <div class="summary">银行九江路支行将其一层打造成“无人银行”，成为国内首个无人银行网点。机器人大堂经理正在通过语音交流引导顾客办理业务</div>
+          </a>
+          <a target="_blank" href="#" class="card">
+            <div class="title">国内首家“无人银行”亮相上海 智能机器人担任大堂经理</div>
+            <div class="time">2018-04-12</div>
+            <div class="summary">银行九江路支行将其一层打造成“无人银行”，成为国内首个无人银行网点。机器人大堂经理正在通过语音交流引导顾客办理业务</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- 文本广告 -->
+
+
+    <hr class="fat">
+
+
+
+
+    <!-- 品牌计划 -->
+    <div class="brand-project">
+
+      <div class="container">
+
+        <div class="brand-title">
+          <img src="../images/brand-logo.png" alt="">
+          <b>品牌计划</b>
+        </div>
+
+        <ul class="list-block clearfix">
+          <li>
+            <a href="#" class="item">
+              <div class="ctv_image">
+                <img data-src="../images/首页_08.jpg" class="lazyload ctv_img" alt="">
+              </div>
+              <div class="con">
+                <h3 class="title">国内首家“无人银行亮相上海智能机器人 担任大堂经理
+                </h3>
+                <div class="time">2018-04-12</div>
+                <div class="summary">
+                  银行九江路支行将其一层打造成“无人银行”成为国内首个无人银行网点...
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="item">
+              <div class="ctv_image">
+                <img data-src="../images/首页_08.jpg" class="lazyload ctv_img" alt="">
+              </div>
+              <div class="con">
+                <h3 class="title">国内首家“无人银行亮相上海智能机器人 担任大堂经理
+                </h3>
+                <div class="time">2018-04-12</div>
+                <div class="summary">
+                  银行九江路支行将其一层打造成“无人银行”成为国内首个无人银行网点...
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="item">
+              <div class="ctv_image">
+                <img data-src="../images/首页_08.jpg" class="lazyload ctv_img" alt="">
+              </div>
+              <div class="con">
+                <h3 class="title">国内首家“无人银行亮相上海智能机器人 担任大堂经理
+                </h3>
+                <div class="time">2018-04-12</div>
+                <div class="summary">
+                  银行九江路支行将其一层打造成“无人银行”成为国内首个无人银行网点...
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="item">
+              <div class="ctv_image">
+                <img data-src="../images/首页_08.jpg" class="lazyload ctv_img" alt="">
+              </div>
+              <div class="con">
+                <h3 class="title">国内首家“无人银行亮相上海智能机器人 担任大堂经理
+                </h3>
+                <div class="time">2018-04-12</div>
+                <div class="summary">
+                  银行九江路支行将其一层打造成“无人银行”成为国内首个无人银行网点...
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="item">
+              <div class="ctv_image">
+                <img data-src="../images/首页_08.jpg" class="lazyload ctv_img" alt="">
+              </div>
+              <div class="con">
+                <h3 class="title">国内首家
+                </h3>
+                <div class="time">2018-04-12</div>
+                <div class="summary">
+                  银行九江路支行将其一层打造成“无人银行”成为国内首个无人银行网点...
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="item">
+              <div class="ctv_image">
+                <img data-src="../images/首页_08.jpg" class="lazyload ctv_img" alt="">
+              </div>
+              <div class="con">
+                <h3 class="title">国内首家“无人银行亮相上海智能机器人 担任大堂经理
+                </h3>
+                <div class="time">2018-04-12</div>
+                <div class="summary">
+                  银行九江路支行将其一层打造成“无人银行”成为国内首个无人银行网点...
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+
+    </div>
+    <!-- 品牌计划 -->
+
+
+  </div>
+
+
+  <div class="ctv-index-footer">
+    <div class="container">
+      <div class="text-center ctv-index-footer-logo">
+        <img src="../images/logo.png" alt="">
+      </div>
+
+      <div class="super-links">
+        <a href="#" class="link">CHNTV中国卫视</a>
+        <a href="#" class="link">广告服务</a>
+        <a href="#" class="link">诚征英才</a>
+        <a href="#" class="link">保护隐私权</a>
+        <a href="#" class="link">免责条款</a>
+        <a href="#" class="link">意见反馈</a>
+        <a href="#" class="link">记者证查询</a>
+      </div>
+
+      <div class="icq">
+        CHN TV中国卫视 版权所有 备案/许可编号：京 ICP 备 17055568 号
+      </div>
+
+      <div class="ctv-index-footer-share">
+        <div class="bshare-custom">
+          <a title="分享到QQ好友" class="bshare-qqim" href="javascript:void(0);" style="width: 39px; height: 39px;background: url('../images/css_sprites.png') -10px -10px;"></a>
+          <a title="分享到QQ空间" class="bshare-qzone" style="width: 39px; height: 39px;background: url('../images/css_sprites.png') -69px -10px;"></a>
+          <a title="分享到微信" class="bshare-weixin" style="width: 39px; height: 39px;background: url('../images/css_sprites.png') -10px -69px;"></a>
+          <a htitle="分享到新浪微博" class="bshare-sinaminiblog" style="width: 39px; height: 39px;background: url('../images/css_sprites.png') -128px -10px;"></a>
+          <a title="分享到腾讯微博" class="bshare-qqmb" style="width: 39px; height: 39px;background: url('../images/css_sprites.png') -69px -69px;"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src='../js/jquery-1.11.0.js'></script>
+  <script src='../js/lazysize.js'></script>
+  <script src="../js/slick.min.js"></script>
+  <script src='../js/main.js'></script>
+
+
+  <script>
+
+
+
+
+    $(".middle-promo").slick({
+      dots: false,
+      draggable: false,
+      arrows: false,
+      speed: 1000,
+      autoplay: true,
+      vertical: true,
+      infinite: false,
+    })
+
+
+
+    $(".text-promo-swiper").slick({
+      dots: false,
+      arrows: false,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      speed: 1000,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      draggable: false,
+    })
+
+
+  </script>
+</body>
+
+</html>
