@@ -271,6 +271,11 @@
 
   })
 
+  $(".js-search-button").on("click",function(){
+    $(this).toggleClass("js-open");
+    $(".js-search-wrapper").toggleClass("open");
+  })
+
 })();
 
 /* 图片上传 */

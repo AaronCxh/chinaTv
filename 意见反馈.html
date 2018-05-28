@@ -398,22 +398,16 @@
           </div>
 
           <div class="footer-share">
-            <!-- <div class="bshare-custom">
-              <div class="bsPromo bsPromo2"></div>
-              <a title="分享到QQ好友" class="bshare-qqim" href="javascript:void(0);">QQ好友</a>
-              <a title="分享到QQ空间" class="bshare-qzone">QQ空间</a>
-              <a title="分享到微信" class="bshare-weixin" href="javascript:void(0);">微信</a>
-              <a title="分享到新浪微博" class="bshare-sinaminiblog">新浪微博</a>
-              <a title="分享到腾讯微博" class="bshare-qqmb">腾讯微博</a>
-            </div> -->
+
 
             <div class="bshare-custom">
-              <a title="分享到QQ好友" class="bshare-qqim" href="javascript:void(0);" style="background-image: url('./images/关于我们_06.png')"></a>
-              <a title="分享到QQ空间" class="bshare-qzone" style="background-image: url('./images/关于我们_08.png')"></a>
-              <a title="分享到微信" class="bshare-weixin" style="background-image: url('./images/关于我们_10.png')"></a>
-              <a htitle="分享到新浪微博" class="bshare-sinaminiblog" style="background-image: url('./images/关于我们_12.png')"></a>
-              <a title="分享到腾讯微博" class="bshare-qqmb" style="background-image: url('./images/关于我们_14.png')"></a>
+              <a title="分享到QQ好友" class="bshare-qqim" href="javascript:void(0);" style="width: 33px; height: 33px;background: url('./images/share_sprites.png') -10px -10px;"></a>
+              <a title="分享到QQ空间" class="bshare-qzone" style="width: 33px; height: 33px;background: url('./images/share_sprites.png') -63px -10px;"></a>
+              <a title="分享到微信" class="bshare-weixin" style="width: 33px; height: 33px;background: url('./images/share_sprites.png') -10px -63px;"></a>
+              <a htitle="分享到新浪微博" class="bshare-sinaminiblog" style="    width: 33px; height: 33px;background: url('./images/share_sprites.png') -63px -63px;"></a>
+              <a title="分享到腾讯微博" class="bshare-qqmb" style="width: 33px; height: 33px;background: url('./images/share_sprites.png') -116px -10px;"></a>
             </div>
+            
           </div>
 
         </div>
@@ -604,7 +598,7 @@
                   <div class="concat-box">
 
                     <div class="concat-type">
-                      <select  id="" class="form-control concat-type-control">
+                      <select id="" class="form-control concat-type-control">
                         <option value="email">邮箱</option>
                         <option value="phone">手机号码</option>
                       </select>
@@ -634,23 +628,23 @@
                       $(".concat-type-control").change(function () {
                         changeInput($(this).val());
                       })
-                      $("#_email, #_phone").keyup(function(e){
+                      $("#_email, #_phone").keyup(function (e) {
                         $("#user_mask").val($(this).val())
                       })
 
                       var emailInput = $("#_email"),
-                          phoneInput = $("#_phone");
+                        phoneInput = $("#_phone");
 
                       function changeInput(value) {
                         emailInput.val("") && phoneInput.val("");
                         switch (value) {
                           case "email":
                             emailInput.parent().addClass("active").siblings().removeClass("active");
-                            $("#user_mask").val(emailInput.val()).prop("name","email");
+                            $("#user_mask").val(emailInput.val()).prop("name", "email");
                             break;
                           case "phone":
                             phoneInput.parent().addClass("active").siblings().removeClass("active");
-                            $("#user_mask").val(phoneInput.val()).prop("name","phone");
+                            $("#user_mask").val(phoneInput.val()).prop("name", "phone");
                             break;
                           default:
                             break;

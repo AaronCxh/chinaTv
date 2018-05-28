@@ -8,7 +8,7 @@
   <link rel='stylesheet' href='../css/ui2.css'>
   <link rel="stylesheet" href="../css/iconfont.css">
   <link rel='stylesheet' href='../css/main.css'>
-  <title>频道</title>
+  <title>频道三级页面</title>
 
   <style>
     /* 背景色，鼠标移入的背景色 */
@@ -51,7 +51,8 @@
     }
 
     /* 加载更多按钮颜色 */
-    .themed .ctv-button{
+
+    .themed .ctv-button {
       border-color: #6A7E46;
       background-color: transparent;
       color: #6A7E46;
@@ -59,237 +60,55 @@
       opacity: 0.8;
       filter: alpha(80);
     }
-    .themed .ctv-button:hover{
+
+    .themed .ctv-button:hover {
       opacity: 1;
       filter: alpha(100);
     }
-    .pt-55{
+
+    .pt-55 {
       padding-bottom: 55px;
+    }
+
+    /* 分享按钮颜色 */
+
+    .info-share {
+      color: #8A9F63;
+    }
+
+
+    /* 正在播放第几集样式 */
+
+    .ctv-slick .card.playing {
+      background: #8a9f63 !important;
+    }
+
+    .ctv-slick .card.playing .count,
+    .ctv-slick .card.playing .title {
+      color: #fff !important;
+    }
+
+
+    /* 底部颜色 */
+    .themed-footer{
+      background: #647942;
+    }
+    .themed-footer .footer-con .f_list li a{
+      color: #fff;
+    }
+    .footer .footer-con .a_list{
+      border-color: #fff;
+      color: #fff;
+    }
+    .footer .footer-con .b_con .icq{
+      color: #fff;
     }
   </style>
 </head>
 
 <body>
-  <div class="promo">
-    <div class="promo-place">
-      <a target="_self" href="#">
-        <img src="../images/guaogao_03.jpg">
-      </a>
-    </div>
-
-  </div>
-
-  <div class='header'>
-
-    <!-- 卫视菜单 -->
-    <div class="header-schedule short">
-
-      <div class="logIn_bar">
-        <div class="container">
-          <div class="logIn">
-            <i class="iconfont">&#xe61b;</i>
-            <a href="/user/profile" class="user_name">登录</a>
-            <span>|</span>
-            <a href="/user/logout">注册</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 左边 -->
-      <a href="#" class="previous">
-        <div class="card">
-          <div class="splash">
-            <div class="image themed themed-splash theme-" style="background-image: url(https://static.1tv.ru/uploads/photo/image/5/little/1475_little_802276f7d8.jpg)"></div>
-            <div class="info">
-              <div class="time">11:40</div>
-              <div class="time-label">正在播出</div>
-            </div>
-          </div>
-          <div class="text">
-            <div class="wrapper">
-              <div class="title">标题标题</div>
-              <div class="age"></div>
-            </div>
-            <button class="itv-button play">
-              <span class="iconfont icon-button-play "></span>在线观看</button>
-          </div>
-          <div class="synchronization">
-            <b>CHNTV</b>&nbsp;
-            <i>24小时</i>同步播出</div>
-        </div>
-      </a>
-      <!-- 左边 -->
-
-      <!-- 右边 -->
-      <div class="next">
-        <div class="card">
-
-          <!-- 语言切换 -->
-          <div class="land hover-item">
-            <span class="hover-title">
-              <i class="anticon">&#xe6f1;</i> &nbsp;语种&nbsp;
-              <i class="anticon">&#xe606;</i>
-            </span>
-            <div class="hover-panel">
-              <div class="box-info">
-                <span class="box-info-item">
-                  <a class="a-link">简体</a>
-                </span>
-                <span class="box-info-item">
-                  <a class="a-link">繁体</a>
-                </span>
-                <span class="box-info-item">
-                  <a class="a-link">英语</a>
-                </span>
-              </div>
-            </div>
-          </div>
-          <!-- 语言切换 -->
 
 
-          <!-- 分享 -->
-          <div class="header_share hover-item">
-            <span class="hover-title">
-              <i class="anticon">&#xe671;</i>分享</span>
-            <div class="hover-panel">
-              <div class="box-info">
-                <span class="box-info-item">
-                  <a class="a-link">微博</a>
-                </span>
-              </div>
-            </div>
-          </div>
-          <!-- 分享 -->
-
-          <div class="splash">
-            <div class="image themed themed-splash theme-" style="background-image: url(https://static.1tv.ru/uploads/photo/image/5/little/1475_little_802276f7d8.jpg)"></div>
-            <div class="info">
-              <div class="time">11:40</div>
-              <div class="time-label">即将播出</div>
-            </div>
-          </div>
-          <div class="text">
-            <div class="wrapper">
-              <div class="title">标题标题</div>
-              <div class="age"></div>
-            </div>
-          </div>
-        </div>
-
-        <button class="index-schedule-arrow" data-role="toggle"></button>
-      </div>
-
-
-      <!-- 右边 -->
-    </div>
-    <!-- 卫视菜单 -->
-
-    <div class="header-navbar">
-      <div class="container">
-        <div class="header-logo">
-          <a href="../index.html">
-            <img src="../images/logo.png" alt="">
-          </a>
-        </div>
-
-        <ul class="navbar">
-          <li class="active">
-            <a href="#">资讯</a>
-          </li>
-          <li class="hover-item">
-            <a href="#">频道</a>
-            <div class="hover-panel">
-              <div class="container">
-                <ul class="down-sub-menu">
-                  <li>
-                    <a href="#">旅游</a>
-                  </li>
-                  <li>
-                    <a href="#">文化</a>
-                  </li>
-                  <li>
-                    <a href="#">财经</a>
-                  </li>
-                  <li>
-                    <a href="#">科技</a>
-                  </li>
-                  <li>
-                    <a href="#">体育</a>
-                  </li>
-                  <li>
-                    <a href="#">综艺</a>
-                  </li>
-                  <li>
-                    <a href="#">时尚</a>
-                  </li>
-                  <li>
-                    <a href="#">电影 · 电视剧 节目</a>
-                  </li>
-                  <li>
-                    <a href="#">少儿</a>
-                  </li>
-                  <li>
-                    <a href="#">军事</a>
-                  </li>
-                  <li>
-                    <a href="#">国学</a>
-                  </li>
-                  <li>
-                    <a href="#">佛教</a>
-                  </li>
-                  <li>
-                    <a href="#">公益</a>
-                  </li>
-                  <li>
-                    <a href="#">VR</a>
-                  </li>
-                  <li>
-                    <a href="#">直播</a>
-                  </li>
-                  <li>
-                    <a href="#">中国剧场</a>
-                  </li>
-                </ul>
-              </div>
-              <hr class="fat">
-            </div>
-          </li>
-          <li>
-            <a href="#">节目</a>
-          </li>
-          <li>
-            <a href="#">电影 · 电视剧</a>
-          </li>
-          <li>
-            <a href="#">纪录片</a>
-          </li>
-          <li>
-            <a href="#">少儿</a>
-          </li>
-          <li>
-            <a href="#">VR</a>
-          </li>
-          <li>
-            <a href="#">节目预算</a>
-          </li>
-          <li>
-            <a href="#">直播</a>
-          </li>
-        </ul>
-
-
-        <div class="header-search">
-          <div class="search-wrapper">
-            <form>
-              <input type="text" class="form-control" placeholder="输入搜索关键词" name="search">
-              <button class="after-icon anticon">&#xe670;</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
 
 
 
@@ -302,10 +121,9 @@
 
       <!-- 该页面的颜色-背景-边框颜色 -->
       <div class="branding_promo_place">
-        <div class="branding-offset" style="height: 350px;"></div>
+        <div class="branding-offset" style="height: 40px;"></div>
         <!-- 背景颜色 -->
         <div class="branding" style="background-color: #71894b;">
-          <img src="../images/公益页面_02.jpg" alt="">
         </div>
         <!-- 背景颜色 -->
 
@@ -330,7 +148,7 @@
               <li>
                 <a href="#">资讯</a>
               </li>
-              <li>
+              <li class="active">
                 <a href="#">佛教常识</a>
               </li>
               <li>
@@ -416,6 +234,106 @@
               </div>
             </div>
             <!-- 视频播放End -->
+
+
+            <!-- 播放视频信息 -->
+            <div class="ctv-container">
+              <div class="info">
+
+                <!-- 视频名称 -->
+                <h2 class="info-title">百慕大山脚 第一话</h2>
+                <!-- 视频名称 -->
+
+                <!-- 视频状态 -->
+                <div class="stats">
+                  <span class="icon">
+                    <i class="iconfont">&#xe665;</i>
+                    <em>2018-04-18</em>
+                  </span>
+                  <span class="icon">
+                    <i class="iconfont">&#xe68e;</i>
+                    <em>20</em>
+                  </span>
+
+                  <a class="icon collect">
+                    <i class="anticon">&#xe6a3;</i>
+                    <em>收藏</em>
+                  </a>
+                </div>
+                <!-- 视频状态 -->
+
+                <!-- 分享按钮 -->
+                <div class="info-share">
+                  <div class="bshare-custom">
+                    <a title="分享到QQ好友" class="bshare-qqim" href="javascript:void(0);" style="background: none;">
+                      <i class="iconfont">&#xe603;</i>
+                    </a>
+                    <a title="分享到QQ空间" class="bshare-qzone" style="background: none;">
+                      <i class="iconfont">&#xe61c;</i>
+                    </a>
+                    <a title="分享到微信" class="bshare-weixin" style="background: none;">
+                      <i class="iconfont">&#xe621;</i>
+                    </a>
+                    <a htitle="分享到新浪微博" class="bshare-sinaminiblog" style="background: none;">
+                      <i class="iconfont">&#xe61c;</i>
+                    </a>
+                    <a title="分享到腾讯微博" class="bshare-qqmb" style="background: none;">
+                      <i class="iconfont">&#xe6a5;</i>
+                    </a>
+                  </div>
+                </div>
+                <!-- 分享按钮 -->
+
+                <!-- 选集 -->
+                <div class="ctv-slick">
+                  <a class="card playing" href="javascript:void(0)">
+                    <h1 class="count">第一话</h1>
+                    <div class="title">百慕大山脚</div>
+                  </a>
+                  <a class="card" href="javascript:void(0)">
+                    <h1 class="count">第一话</h1>
+                    <div class="title">百慕大山脚</div>
+                  </a>
+                  <a class="card" href="javascript:void(0)">
+                    <h1 class="count">第一话</h1>
+                    <div class="title">百慕大山脚</div>
+                  </a>
+                  <a class="card" href="javascript:void(0)">
+                    <h1 class="count">第一话</h1>
+                    <div class="title">百慕大山脚</div>
+                  </a>
+                  <a class="card" href="javascript:void(0)">
+                    <h1 class="count">第一话</h1>
+                    <div class="title">百慕大山脚</div>
+                  </a>
+                  <a class="card" href="javascript:void(0)">
+                    <h1 class="count">第一话</h1>
+                    <div class="title">百慕大山脚</div>
+                  </a>
+                  <a class="card" href="javascript:void(0)">
+                    <h1 class="count">第一话</h1>
+                    <div class="title">百慕大山脚</div>
+                  </a>
+                </div>
+                <!-- 选集 -->
+
+                <div class="summary">
+                  <p>
+                    中国卫视控股有限公司（简称t中国卫视）诞生于2017年11月10日，是集卫星电视、宽频网络、有线电视和影视剧制作为一体的全球性传媒集团经香港特别行政区批准注册成立备案中央人民政府驻香港特别行政区联络办公室。
+                    <br> 中国卫视以24小时开路不加密的方式，通过老挝一号卫星、亚太五号卫星CombosTV直播系统、美国DISHNETWORK卫星直播系统、亚洲4号卫星DISH ASIA HD卫星直播系统，覆盖亚太地区和北美地区。通过宽频电视网覆盖全球有互联网的国家与地区传媒集团。经香港特别行政区批准注册成立备案中央人民政府驻香港特别行政区联络办公室。
+                  </p>
+                </div>
+              </div>
+
+              <div class="info-promo">
+                <a href="#">
+                  <img src="../images/公益-三级_03.png" alt="">
+                </a>
+              </div>
+            </div>
+            <!-- 播放视频信息 -->
+
+
 
             <!-- 视频推荐 -->
             <div class="page-recommend">
@@ -786,11 +704,97 @@
                 </ul>
 
                 <div class="pt-55">
-                  <a  class="button ctv-button">Look more</a>
+                  <a class="button ctv-button">Look more</a>
                 </div>
+
+
               </div>
             </div>
             <!-- 视频推荐End -->
+
+
+            <!-- 评论框 -->
+            <div class="comment-module">
+
+              <div class="comment-home">
+
+                <h1 class="comment-title">评论
+                  <span>(
+                    <i class="comment-count">60</i>)</span>
+                </h1>
+
+                <div class="user-comment">
+                  <div class="user-head" style="background: url('../images/user-placeholder.png')"></div>
+                  <div class="user-con">
+                    <!-- 判断是否有登录，没有登录在disabled -->
+                    <textarea class="disabled" name="" id="" disabled></textarea>
+
+                    <!-- 没有登录时显示 -->
+                    <div class="user-isLogin">
+                      <span>请先
+                        <a href="#" class="button" style="background-color: #8A9F63;color: #fff;">登录</a> 后发表评论</span>
+                    </div>
+                    <!-- 没有登录时显示 -->
+
+                    <div class="button-wrap">
+                      <button class="button issue_button disabled" disabled style="background-color: #8A9F63;color: #fff;">发表评论</button>
+                    </div>
+
+                  </div>
+                </div>
+
+
+                <div class="comment-box">
+                  <h1 class="title">全部评论</h1>
+                  <ul class="comment-list">
+
+                    <li class="list-item">
+                      <div class="user-head" style="background-image: url('../images/公益-三级_21.png')"></div>
+                      <div class="user-con">
+                        <div class="user-top">
+                          <a href="#" class="user-name">一阵风</a>
+                          <span class="time">1天前</span>
+                        </div>
+                        <div class="user-bottom">
+                          <p>
+                            中国卫视诞生于2017年11月10日，是集卫星电视、宽频网络、有线电视和影视剧制作为一体的全球性传媒集团
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="list-item">
+                      <div class="user-head" style="background-image: url('../images/公益-三级_21.png')"></div>
+                      <div class="user-con">
+                        <div class="user-top">
+                          <a href="#" class="user-name">一阵风</a>
+                          <span class="time">1天前</span>
+                        </div>
+                        <div class="user-bottom">
+                          <p>
+                            中国卫视诞生于2017年11月10日，是集卫星电视、宽频网络、有线电视和影视剧制作为一体的全球性传媒集团
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+
+                  <div class="button-wrap">
+                    <button class="ctv-button disabled">没有更多评论</button>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="promo">
+                <a href="#">
+                  <img src="../images/公益-三级_14.png" alt="">
+                </a>
+              </div>
+            </div>
+            <!-- 评论框 -->
+
           </div>
 
         </div>
@@ -799,6 +803,9 @@
 
       </div>
       <!-- 内容部分 -->
+
+
+      <div class="branding-offset" style="height: 40px;background-color: #71894b;position: relative;margin-top: 10px;"></div>
 
 
     </div>
@@ -811,192 +818,72 @@
 
 
 
-    <!-- 中间广告 -->
-    <dir class="middle-promo">
-      <a href="#">
-        <img src="../images/广告1.jpg">
-      </a>
-      <a href="#">
-        <img src="../images/广告2.jpg">
-      </a>
-    </dir>
-    <!-- 中间广告 -->
-
-    <!-- 文本广告 -->
-    <div class="text-promo">
-
-      <div class="container">
-        <div class="cards text-promo-swiper">
-          <a target="_blank" href="#" class="card">
-            <div class="title">国内首家“无人银行”亮相上海 智能机器人担任大堂经理</div>
-            <div class="time">2018-04-12</div>
-            <div class="summary">银行九江路支行将其一层打造成“无人银行”，成为国内首个无人银行网点。机器人大堂经理正在通过语音交流引导顾客办理业务</div>
-          </a>
-          <a target="_blank" href="#" class="card">
-            <div class="title">国内首家“无人银行”亮相上海 智能机器人担任大堂经理</div>
-            <div class="time">2018-04-12</div>
-            <div class="summary">银行九江路支行将其一层打造成“无人银行”，成为国内首个无人银行网点。机器人大堂经理正在通过语音交流引导顾客办理业务</div>
-          </a>
-          <a target="_blank" href="#" class="card">
-            <div class="title">国内首家“无人银行”亮相上海 智能机器人担任大堂经理</div>
-            <div class="time">2018-04-12</div>
-            <div class="summary">银行九江路支行将其一层打造成“无人银行”，成为国内首个无人银行网点。机器人大堂经理正在通过语音交流引导顾客办理业务</div>
-          </a>
-          <a target="_blank" href="#" class="card">
-            <div class="title">国内首家“无人银行”亮相上海 智能机器人担任大堂经理</div>
-            <div class="time">2018-04-12</div>
-            <div class="summary">银行九江路支行将其一层打造成“无人银行”，成为国内首个无人银行网点。机器人大堂经理正在通过语音交流引导顾客办理业务</div>
-          </a>
-        </div>
-      </div>
-    </div>
-    <!-- 文本广告 -->
-
-
-    <hr class="fat">
-
-
-
-
-    <!-- 品牌计划 -->
-    <div class="brand-project">
-
-      <div class="container">
-
-        <div class="brand-title">
-          <img src="../images/brand-logo.png" alt="">
-          <b>品牌计划</b>
-        </div>
-
-        <ul class="list-block clearfix">
-          <li>
-            <a href="#" class="item">
-              <div class="ctv_image">
-                <img data-src="../images/首页_08.jpg" class="lazyload ctv_img" alt="">
-              </div>
-              <div class="con">
-                <h3 class="title">国内首家“无人银行亮相上海智能机器人 担任大堂经理
-                </h3>
-                <div class="time">2018-04-12</div>
-                <div class="summary">
-                  银行九江路支行将其一层打造成“无人银行”成为国内首个无人银行网点...
-                </div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="item">
-              <div class="ctv_image">
-                <img data-src="../images/首页_08.jpg" class="lazyload ctv_img" alt="">
-              </div>
-              <div class="con">
-                <h3 class="title">国内首家“无人银行亮相上海智能机器人 担任大堂经理
-                </h3>
-                <div class="time">2018-04-12</div>
-                <div class="summary">
-                  银行九江路支行将其一层打造成“无人银行”成为国内首个无人银行网点...
-                </div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="item">
-              <div class="ctv_image">
-                <img data-src="../images/首页_08.jpg" class="lazyload ctv_img" alt="">
-              </div>
-              <div class="con">
-                <h3 class="title">国内首家“无人银行亮相上海智能机器人 担任大堂经理
-                </h3>
-                <div class="time">2018-04-12</div>
-                <div class="summary">
-                  银行九江路支行将其一层打造成“无人银行”成为国内首个无人银行网点...
-                </div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="item">
-              <div class="ctv_image">
-                <img data-src="../images/首页_08.jpg" class="lazyload ctv_img" alt="">
-              </div>
-              <div class="con">
-                <h3 class="title">国内首家“无人银行亮相上海智能机器人 担任大堂经理
-                </h3>
-                <div class="time">2018-04-12</div>
-                <div class="summary">
-                  银行九江路支行将其一层打造成“无人银行”成为国内首个无人银行网点...
-                </div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="item">
-              <div class="ctv_image">
-                <img data-src="../images/首页_08.jpg" class="lazyload ctv_img" alt="">
-              </div>
-              <div class="con">
-                <h3 class="title">国内首家
-                </h3>
-                <div class="time">2018-04-12</div>
-                <div class="summary">
-                  银行九江路支行将其一层打造成“无人银行”成为国内首个无人银行网点...
-                </div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="item">
-              <div class="ctv_image">
-                <img data-src="../images/首页_08.jpg" class="lazyload ctv_img" alt="">
-              </div>
-              <div class="con">
-                <h3 class="title">国内首家“无人银行亮相上海智能机器人 担任大堂经理
-                </h3>
-                <div class="time">2018-04-12</div>
-                <div class="summary">
-                  银行九江路支行将其一层打造成“无人银行”成为国内首个无人银行网点...
-                </div>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-
-    </div>
-    <!-- 品牌计划 -->
-
 
   </div>
 
 
-  <div class="ctv-index-footer">
+  <div class='footer themed-footer'>
     <div class="container">
-      <div class="text-center ctv-index-footer-logo">
-        <img src="../images/logo.png" alt="">
+      <div class="footer-code">
+        <img src="../images/关于我们_03.png" alt="">
       </div>
+      <div class="footer-con">
 
-      <div class="super-links">
-        <a href="#" class="link">CHNTV中国卫视</a>
-        <a href="#" class="link">广告服务</a>
-        <a href="#" class="link">诚征英才</a>
-        <a href="#" class="link">保护隐私权</a>
-        <a href="#" class="link">免责条款</a>
-        <a href="#" class="link">意见反馈</a>
-        <a href="#" class="link">记者证查询</a>
-      </div>
+        <ul class="f_list">
+          <li class="first">
+            <a href="#">CHNTV中国卫视</a>
+          </li>
+          <li>
+            <a href="#">广告服务</a>
+          </li>
+          <li>
+            <a href="#">诚征英才</a>
+          </li>
+          <li>
+            <a href="#">保护隐私权 </a>
+          </li>
+          <li>
+            <a href="#">免责条款</a>
+          </li>
+          <li>
+            <a href="#">意见反馈</a>
+          </li>
+          <li>
+            <a href="#">记者证查询</a>
+          </li>
+        </ul>
 
-      <div class="icq">
-        CHN TV中国卫视 版权所有 备案/许可编号：京 ICP 备 17055568 号
-      </div>
+        <ul class="a_list">
+          <li>
+            <span>地址：广东省深圳市福田区八卦四路先科集团大院2栋东面203室</span>
+          </li>
+          <li>
+            <span>电话：0795-82864598</span>
+          </li>
+          <li>
+            <span>邮箱：454910408@qq.com</span>
+          </li>
+        </ul>
 
-      <div class="ctv-index-footer-share">
-        <div class="bshare-custom">
-          <a title="分享到QQ好友" class="bshare-qqim" href="javascript:void(0);" style="width: 39px; height: 39px;background: url('../images/css_sprites.png') -10px -10px;"></a>
-          <a title="分享到QQ空间" class="bshare-qzone" style="width: 39px; height: 39px;background: url('../images/css_sprites.png') -69px -10px;"></a>
-          <a title="分享到微信" class="bshare-weixin" style="width: 39px; height: 39px;background: url('../images/css_sprites.png') -10px -69px;"></a>
-          <a htitle="分享到新浪微博" class="bshare-sinaminiblog" style="width: 39px; height: 39px;background: url('../images/css_sprites.png') -128px -10px;"></a>
-          <a title="分享到腾讯微博" class="bshare-qqmb" style="width: 39px; height: 39px;background: url('../images/css_sprites.png') -69px -69px;"></a>
+        <div class="b_con">
+
+          <div class="icq">
+            CHN TV中国卫视 版权所有 备案/许可编号：京 ICP 备 17055568 号
+          </div>
+
+          <div class="footer-share">
+
+
+            <div class="bshare-custom">
+              <a title="分享到QQ好友" class="bshare-qqim" href="javascript:void(0);" style="width: 33px; height: 33px;background: url('../images/share_sprites.png') -10px -10px;"></a>
+              <a title="分享到QQ空间" class="bshare-qzone" style="width: 33px; height: 33px;background: url('../images/share_sprites.png') -63px -10px;"></a>
+              <a title="分享到微信" class="bshare-weixin" style="width: 33px; height: 33px;background: url('../images/share_sprites.png') -10px -63px;"></a>
+              <a htitle="分享到新浪微博" class="bshare-sinaminiblog" style="    width: 33px; height: 33px;background: url('../images/share_sprites.png') -63px -63px;"></a>
+              <a title="分享到腾讯微博" class="bshare-qqmb" style="width: 33px; height: 33px;background: url('../images/share_sprites.png') -116px -10px;"></a>
+            </div>
+
+          </div>
+
         </div>
       </div>
     </div>
@@ -1013,29 +900,15 @@
   <script>
 
 
-
-
-    $(".middle-promo").slick({
-      dots: false,
-      draggable: false,
-      arrows: false,
-      speed: 1000,
-      autoplay: true,
-      vertical: true,
-      infinite: false,
-    })
-
-
-
-    $(".text-promo-swiper").slick({
-      dots: false,
-      arrows: false,
-      slidesToShow: 3,
+    $(".ctv-slick").slick({
+      arrows: true,
+      slidesToShow: 6,
       slidesToScroll: 1,
-      speed: 1000,
-      autoplay: true,
-      autoplaySpeed: 5000,
-      draggable: false,
+      variableWidth: true,
+      prevArrow: "<button class='prev-button'><i class='anticon'>&#xe609;</i></button>",
+      nextArrow: "<button class='next-button'><i class='anticon'>&#xe608;</i></button>",
+      infinite: false,
+      draggable: false
     })
 
 
