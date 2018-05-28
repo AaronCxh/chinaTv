@@ -573,7 +573,7 @@ body{
     }
   }
   > li.active{
-    a{
+    > a{
       padding: 0 4px;
       color: #05519d;
       border: 2px solid #05519d;
