@@ -3,6 +3,7 @@
 @import "collapse.scss";
 @import "_citys.scss";
 @import "_pager.scss";
+@import "data_input.scss";
 
 
 
@@ -1278,6 +1279,15 @@ table{
 .bigbanner{
   background: #000;
   width: 100%;
+  height: 0;
+  overflow: hidden;
+  opacity:0;
+  transition: opacity 0.3s;
+  &.slick-initialized{
+    height:auto;
+    overflow: visible;
+    opacity: 1;
+  }
   &:hover{
     .tv-slick-arrow{
       opacity: 0.4;
@@ -1491,6 +1501,7 @@ table{
 }
 
 .ctv_image{
+  position: relative;
   overflow: hidden;
   height: 100%;
 }
@@ -3051,12 +3062,24 @@ header.page-title{
       }
     }
     .image{
+      position: relative;
       font-size: 0;
       height: 104px;
       margin-bottom: 5px;
       overflow: hidden;
       img{
         transition: all 0.7s;
+      }
+      .time{
+        position: absolute;
+        font-size: 12px;
+        color: #fff;
+        padding: 6px;
+        bottom: 0;
+        left: 0;
+        background-color: #000;
+        @include IE8-opacity(70);
+        background-color: rgba(0,0,0,.7);
       }
     }
     .text{
@@ -3404,6 +3427,7 @@ header.page-title{
   z-index: 1;
   background-size: cover;
   background-position: center top;
+  background-attachment: fixed;
   // &::before{
   //   content: '';
   //   position: absolute;
@@ -3470,7 +3494,7 @@ header.page-title{
 .hreo-footer{
   position: relative;
   z-index: 2;
-  margin-top: -246px;
+  margin-top: -264px;
 }
 
 .hero-show-panel{
@@ -3549,4 +3573,67 @@ header.page-title{
 
 .hero-show-panel + .middle-promo-panel{
   margin-top: 0;
+}
+
+
+.picker-home{
+  margin-bottom: 20px;
+}
+.info--promo{
+  .promo{
+    border: 1px solid #f1f1f1;
+    padding: 8px;
+    margin-bottom: 20px;
+    img{
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+}
+
+
+.icon-player{
+  display:inline-block;
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -28px 0 0 -28px;
+  background: url('../images/player_control.png') no-repeat center ;
+}
+
+
+.hero-showTime{
+  height: 290px;
+  .showTime-slick{
+    position: relative;
+    width: 100%;
+    background: #0081c9;
+    overflow: hidden;
+    .card{
+      display: block;
+      position: relative;
+      width: 14%;
+      float: left;
+      overflow: hidden;
+      background: #0081c9;
+      padding: 10px;
+      display: inline;
+      overflow: hidden;
+      transition: all 0.2s;
+      height: 300px;
+      border-left: 1px solid #fff;
+      border-right: 1px solid #fff;
+      color: #fff;
+      opacity: 0.85;
+    }
+    .card.active{
+      background: #fff;
+      color: #003ca6;
+      pointer-events: none;
+      opacity: 1;
+    }
+  }
 }

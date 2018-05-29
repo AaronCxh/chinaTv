@@ -10,7 +10,6 @@
     display: inline-block;
 }
 .header-logo .image{
-    border-bottom: 1px solid #ddd;
     font-size: 0;
 }
 .header-text{

@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <link rel='icon' href=''>
+  <link rel='stylesheet' href='../css/ui2.css'>
+  <link rel="stylesheet" href="../css/iconfont.css">
+  <link rel='stylesheet' href='../css/main.css'>
+  <title>节目频道</title>
+  <!-- 分享 -->
+  <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+  <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+  <!-- 分享 -->
+  <style>
+    .page-content--themed,
+    #page-header {
+      background-color: #260701;
+    }
+
+    /* 背景色，鼠标移入的背景色 */
+
+    .page-recommend-list .item {
+      background: #40080E;
+      transition: all 0.3s;
+    }
+
+    .page-recommend-list .item .hoverable::after {
+      color: #40080E;
+    }
+
+    .page-recommend-list .item:hover {
+      background: #4F0B11;
+    }
+
+    .page-recommend-list .item:hover .hoverable:after {
+      color: #4F0B11;
+    }
+
+    .page-recommend-list .item .hoverable {
+      background-color: #40080E;
+    }
+
+    .page-recommend-list .item:hover .hoverable {
+      background: #4F0B11;
+      ;
+    }
+
+
+
+
+    /* 字体颜色。鼠标移入时的字体颜色 */
+
+    .page-recommend-list .item .text {
+      color: #C99296;
+    }
+
+    .page-recommend-list .item .text:hover {
+      color: #E9CECE;
+    }
+
+    .page-recommend-list .item .text .title {
+      color: #C99296;
+    }
+
+    .page-recommend-list .item .text:hover .title {
+      color: #E9CECE;
+    }
+
+    /* 加载更多按钮颜色 */
+
+    .themed .ctv-button {
+      border-color: #84171E;
+      background-color: transparent;
+      color: #84171E;
+      fill: #84171E;
+      opacity: 0.8;
+      filter: alpha(80);
+    }
+
+    .themed .ctv-button:hover {
+      opacity: 1;
+      filter: alpha(100);
+    }
+
+    .pt-55 {
+      padding-bottom: 55px;
+    }
+
+    /* 分享按钮颜色 */
+
+    .info-share {
+      color: #260701;
+    }
+
+
+    /* 正在播放第几集样式 */
+
+    .ctv-slick .card.playing {
+      background: #260701 !important;
+    }
+
+    .ctv-slick .card.playing .count,
+    .ctv-slick .card.playing .title {
+      color: #fff !important;
+    }
+
+    .ctv-container .info .ctv-slick .next-button,
+    .ctv-container .info .ctv-slick .prev-button,
+    .ctv-show-slick .next-button,
+    .ctv-show-slick .prev-button {
+      color: #260701
+    }
+
+
+    /* 底部颜色 */
+
+    .themed-footer {
+      background: #080100;
+    }
+
+    .themed-footer .footer-con .f_list li a {
+      color: #565252
+    }
+
+    .footer .footer-con .a_list {
+      border-color: #211B1A;
+      color: #565252;
+    }
+
+    .footer .footer-con .b_con .icq {
+      color: #565252
+    }
+
+
+
+
+    /* 为您推荐 */
+
+    .program-recommend-show-slick .con {
+      color: #F3FFDE;
+      margin-top: 5px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .program-recommend-show-slick .next-button,
+    .program-recommend-show-slick .prev-button {
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="promo">
+    <div class="promo-place">
+      <a target="_self" href="#">
+        <img src="../images/guaogao_03.jpg">
+      </a>
+    </div>
+
+  </div>
+
+  <div class='header'>
+
+    <!-- 卫视菜单 -->
+    <div class="header-schedule short">
+
+      <div class="logIn_bar">
+        <div class="container">
+          <div class="logIn">
+            <i class="iconfont">&#xe61b;</i>
+            <a href="/user/profile" class="user_name">登录</a>
+            <span>|</span>
+            <a href="/user/logout">注册</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 左边 -->
+      <a href="#" class="previous">
+        <div class="card">
+          <div class="splash">
+            <div class="image themed themed-splash theme-" style="background-image: url(https://static.1tv.ru/uploads/photo/image/5/little/1475_little_802276f7d8.jpg)"></div>
+            <div class="info">
+              <div class="time">11:40</div>
+              <div class="time-label">正在播出</div>
+            </div>
+          </div>
+          <div class="text">
+            <div class="wrapper">
+              <div class="title">标题标题</div>
+              <div class="age"></div>
+            </div>
+            <button class="itv-button play">
+              <span class="iconfont icon-button-play "></span>在线观看</button>
+          </div>
+          <div class="synchronization">
+            <b>CHNTV</b>&nbsp;
+            <i>24小时</i>同步播出</div>
+        </div>
+      </a>
+      <!-- 左边 -->
+
+      <!-- 右边 -->
+      <div class="next">
+        <div class="card">
+
+          <!-- 语言切换 -->
+          <div class="land hover-item">
+            <span class="hover-title">
+              <i class="anticon">&#xe6f1;</i> &nbsp;语种&nbsp;
+              <i class="anticon">&#xe606;</i>
+            </span>
+            <div class="hover-panel">
+              <div class="box-info">
+                <span class="box-info-item">
+                  <a class="a-link">简体</a>
+                </span>
+                <span class="box-info-item">
+                  <a class="a-link">繁体</a>
+                </span>
+                <span class="box-info-item">
+                  <a class="a-link">英语</a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- 语言切换 -->
+
+
+          <!-- 分享 -->
+          <div class="header_share hover-item">
+            <span class="hover-title">
+              <i class="anticon">&#xe671;</i>分享</span>
+            <div class="hover-panel">
+              <div class="box-info">
+                <span class="box-info-item">
+                  <a class="a-link">微博</a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- 分享 -->
+
+          <div class="splash">
+            <div class="image themed themed-splash theme-" style="background-image: url(https://static.1tv.ru/uploads/photo/image/5/little/1475_little_802276f7d8.jpg)"></div>
+            <div class="info">
+              <div class="time">11:40</div>
+              <div class="time-label">即将播出</div>
+            </div>
+          </div>
+          <div class="text">
+            <div class="wrapper">
+              <div class="title">标题标题</div>
+              <div class="age"></div>
+            </div>
+          </div>
+        </div>
+
+        <button class="index-schedule-arrow" data-role="toggle"></button>
+      </div>
+
+
+      <!-- 右边 -->
+    </div>
+    <!-- 卫视菜单 -->
+
+    <div class="header-navbar">
+      <div class="container">
+        <div class="header-logo">
+          <a href="../index.html">
+            <img src="../images/logo.png" alt="">
+          </a>
+        </div>
+
+        <ul class="navbar">
+          <li class="hover-item">
+            <a href="#">资讯</a>
+            <div class="hover-panel"></div>
+          </li>
+          <li class="hover-item">
+            <a href="#">频道</a>
+            <div class="hover-panel">
+              <div class="container">
+                <ul class="down-sub-menu">
+                  <li>
+                    <a href="../旅游/旅游.html">旅游</a>
+                  </li>
+                  <li>
+                    <a href="../文化/文化.html">文化</a>
+                  </li>
+                  <li>
+                    <a href="../财经/财经.html">财经</a>
+                  </li>
+                  <li>
+                    <a href="../科技/科技.html">科技</a>
+                  </li>
+                  <li>
+                    <a href="../体育/体育.html">体育</a>
+                  </li>
+                  <li>
+                    <a href="../综艺/综艺.html">综艺</a>
+                  </li>
+                  <li>
+                    <a href="../时尚/时尚.html">时尚</a>
+                  </li>
+                  <li>
+                    <a href="../微电影.html/电影 · 电视剧.html">电影 · 电视剧 节目</a>
+                  </li>
+                  <li>
+                    <a href="../少儿剧场/少儿.html">少儿</a>
+                  </li>
+                  <li>
+                    <a href="../军事/军事.html">军事</a>
+                  </li>
+                  <li>
+                    <a href="../国学/国学.html">国学</a>
+                  </li>
+                  <li>
+                    <a href="../佛教/佛教.html">佛教</a>
+                  </li>
+                  <li>
+                    <a href="../公益/公益.html">公益</a>
+                  </li>
+                  <li>
+                    <a href="../vr/VR.html">VR</a>
+                  </li>
+                  <li>
+                    <a href="http://www.baidu.com">直播</a>
+                  </li>
+                  <li>
+                    <a href="../微电影.html/电影 · 电视剧.html">中国剧场</a>
+                  </li>
+                </ul>
+              </div>
+              <hr class="fat">
+            </div>
+          </li>
+          <li class="hover-item">
+            <a href="#">节目</a>
+            <div class="hover-panel">
+              <div class="container">
+                <ul class="down-sub-menu">
+                  <li>
+                    <a href="../节目频道/一带一路.html">一带一路</a>
+                  </li>
+                  <li>
+                    <a href="../节目频道/非常商道.html">非常商道</a>
+                  </li>
+                  <li>
+                    <a href="../节目频道/中国制造.html">中国制造</a>
+                  </li>
+                  <li>
+                    <a href="../节目频道/再别乡愁.html">再别乡愁</a>
+                  </li>
+                  <li>
+                    <a href="../节目频道/墨香.html">墨香</a>
+                  </li>
+                  <li>
+                    <a href="../节目频道/中国味道.html">中国味道</a>
+                  </li>
+                  <li>
+                    <a href="../节目频道/行者笔记.html">行者笔记</a>
+                  </li>
+                  <li>
+                    <a href="../节目频道/节目频道.html">中国客厅</a>
+                  </li>
+                  <li>
+                    <a href="../节目频道/时尚时刻.html">时尚时刻</a>
+                  </li>
+                  <li>
+                    <a href="../节目频道/上风顺水.html">上风顺水</a>
+                  </li>
+                  <li>
+                    <a href="../节目频道/世界说.html">世界说</a>
+                  </li>
+                  <li>
+                    <a href="../节目频道/中国剧场.html">中国剧场</a>
+                  </li>
+
+                </ul>
+              </div>
+              <hr class="fat">
+            </div>
+
+          </li>
+          <li>
+            <a href="../微电影.html/电影 · 电视剧.html">电影 · 电视剧</a>
+          </li>
+          <li>
+            <a href="../微电影.html/电影 · 电视剧.html">纪录片</a>
+          </li>
+          <li>
+            <a href="../少儿剧场/少儿.html">少儿</a>
+          </li>
+          <li>
+            <a href="../vr/VR.html">VR</a>
+          </li>
+          <li>
+            <a href="../节目预告.html">节目预告</a>
+          </li>
+          <li>
+            <a href="http://www.baidu.com">直播</a>
+          </li>
+        </ul>
+
+
+        <div class="header-search">
+          <div class="search-wrapper">
+            <form>
+              <input type="text" class="form-control" placeholder="输入搜索关键词" name="search">
+              <button class="after-icon anticon">&#xe670;</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class='main'>
+
+    <!-- 频道主体 -->
+    <div class="brandable themed">
+
+
+      <!-- 该页面的颜色-背景-边框颜色 -->
+      <div class="branding_promo_place">
+        <div class="branding-offset" style="height: 350px;"></div>
+        <!-- 背景颜色 -->
+        <div class="branding" style="background-color: #110300">
+          <img src="../images/再别乡愁_02.jpg" alt="">
+        </div>
+        <!-- 背景颜色 -->
+
+        <!-- 边框的颜色 -->
+        <div class="branding-frame" style="background-color: #000000"></div>
+        <!-- 边框的颜色 -->
+
+      </div>
+      <!-- 该页面的颜色-背景-边框颜色 -->
+
+      <!-- 内容部分 -->
+      <div class="show-main branded">
+        <!-- 头部颜色，字体颜色 -->
+        <header class="page-title" id="page-header" style="color: #cddbb2">
+
+          <h2 class="page-name" style="color: 
+          #E4CBCC">
+            再别乡愁&nbsp;&nbsp;
+            <span style="color: #7F6260">周六 23：00</span>
+          </h2>
+
+
+
+        </header>
+
+        <!-- 边框 -->
+        <hr class="fat" style="background-color: #380E12">
+        <!-- 边框End -->
+
+        <!-- 内容部分 -->
+        <!-- 背景颜色，字体颜色 -->
+        <div class="page-content--themed">
+
+          <div class="page-content">
+
+            <!-- 视频播放 -->
+            <div class="player-wrapper">
+              <div class="player"></div>
+
+              <div class="player-list">
+                <a href="#" class="item active">
+                  <div class="image" style="background-image: url('../images/公益页面_03.png')"></div>
+                  <div class="text">
+                    为什么日本没有像中国那样大量地制造手机，尽管日本在...
+                  </div>
+                </a>
+                <a href="#" class="item">
+                  <div class="image" style="background-image: url('../images/公益页面_03.png')"></div>
+                  <div class="text">
+                    为什么日本没有像中国那样大量地制造手机，尽管日本在...
+                  </div>
+                </a>
+                <a href="#" class="item">
+                  <div class="image" style="background-image: url('../images/公益页面_03.png')"></div>
+                  <div class="text">
+                    为什么日本没有像中国那样大量地制造手机，尽管日本在...
+                  </div>
+                </a>
+                <a href="#" class="item">
+                  <div class="image" style="background-image: url('../images/公益页面_03.png')"></div>
+                  <div class="text">
+                    为什么日本没有像中国那样大量地制造手机，尽管日本在...
+                  </div>
+                </a>
+                <a href="#" class="item">
+                  <div class="image" style="background-image: url('../images/公益页面_03.png')"></div>
+                  <div class="text">
+                    为什么日本没有像中国那样大量地制造手机，尽管日本在...
+                  </div>
+                </a>
+                <a href="#" class="item">
+                  <div class="image" style="background-image: url('../images/公益页面_03.png')"></div>
+                  <div class="text">
+                    为什么日本没有像中国那样大量地制造手机，尽管日本在...
+                  </div>
+                </a>
+                <a href="#" class="item">
+                  <div class="image" style="background-image: url('../images/公益页面_03.png')"></div>
+                  <div class="text">
+                    为什么日本没有像中国那样大量地制造手机，尽管日本在...
+                  </div>
+                </a>
+                <a href="#" class="item">
+                  <div class="image" style="background-image: url('../images/公益页面_03.png')"></div>
+                  <div class="text">
+                    为什么日本没有像中国那样大量地制造手机，尽管日本在...
+                  </div>
+                </a>
+
+              </div>
+            </div>
+            <!-- 视频播放End -->
+
+
+            <!-- 播放视频信息 -->
+            <div class="ctv-container full-ctv-container">
+
+              <div class="info">
+
+                <!-- 视频名称 -->
+                <h2 class="info-title">《中国制造》 第3期：恭喜华为！不怕美国阻拦，宣布三大喜讯！</h2>
+                <!-- 视频名称 -->
+
+                <!-- 视频状态 -->
+                <div class="stats">
+                  <span class="icon">
+                    <i class="iconfont">&#xe665;</i>
+                    <em>2018-04-18</em>
+                  </span>
+                  <span class="icon">
+                    <i class="iconfont">&#xe68e;</i>
+                    <em>20</em>
+                  </span>
+
+                  <a class="icon collect">
+                    <i class="anticon">&#xe6a3;</i>
+                    <em>收藏</em>
+                  </a>
+
+                  <!-- 分享按钮 -->
+                  <span class="icon">分享：
+                    <!-- 分享按钮 -->
+                    <div class="info-share">
+                      <div class="bshare-custom">
+                        <a title="分享到QQ好友" class="bshare-qqim" href="javascript:void(0);" style="background: none;">
+                          <i class="iconfont">&#xe603;</i>
+                        </a>
+                        <a title="分享到QQ空间" class="bshare-qzone" style="background: none;">
+                          <i class="iconfont">&#xe61c;</i>
+                        </a>
+                        <a title="分享到微信" class="bshare-weixin" style="background: none;">
+                          <i class="iconfont">&#xe621;</i>
+                        </a>
+                        <a htitle="分享到新浪微博" class="bshare-sinaminiblog" style="background: none;">
+                          <i class="iconfont">&#xe61c;</i>
+                        </a>
+                        <a title="分享到腾讯微博" class="bshare-qqmb" style="background: none;">
+                          <i class="iconfont">&#xe6a5;</i>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- 分享按钮 -->
+                  </span>
+
+
+                </div>
+                <!-- 视频状态 -->
+
+
+
+
+                <div class="summary">
+                  <p>
+                    中国卫视以24小时开路不加密的方式，通过老挝一号卫星、亚太五号卫星CombosTV直播系统、美国DISHNETWORK卫星直播系统、亚洲4号卫星DISH ASIA HD卫星直播系统，覆盖亚太地区和北美地区。通过宽频电视网覆盖全球有互联网的国家与地区传媒集团。经香港特别行政区批准注册成立备案中央人民政府驻香港特别行政区联络办公室。
+                  </p>
+                </div>
+
+
+                <!-- 选集 -->
+                <h1 class="ctv-show-slick-title">中国制造</h1>
+                <div class="ctv-show-slick">
+                  <a class="card" href="javascript:void(0)">
+                    <div class="image">
+                      <img src="../images/中国客厅_03.jpg" alt="">
+                      <span class="time">2018-04-27</span>
+                    </div>
+                    <div class="text">
+                      第2期：老外中国扳手挑战美 国扳手
+                    </div>
+                  </a>
+                  <a class="card" href="javascript:void(0)">
+                    <div class="image">
+                      <img src="../images/中国客厅_03.jpg" alt="">
+                      <span class="time">2018-04-27</span>
+                    </div>
+                    <div class="text">
+                      第2期：老外中国扳手挑战美 国扳手
+                    </div>
+                  </a>
+                  <a class="card" href="javascript:void(0)">
+                    <div class="image">
+                      <img src="../images/中国客厅_03.jpg" alt="">
+                      <span class="time">2018-04-27</span>
+                    </div>
+                    <div class="text">
+                      第2期：老外中国扳手挑战美 国扳手
+                    </div>
+                  </a>
+                  <a class="card" href="javascript:void(0)">
+                    <div class="image">
+                      <img src="../images/中国客厅_03.jpg" alt="">
+                      <span class="time">2018-04-27</span>
+                    </div>
+                    <div class="text">
+                      第2期：老外中国扳手挑战美 国扳手
+                    </div>
+                  </a>
+                  <a class="card" href="javascript:void(0)">
+                    <div class="image">
+                      <img src="../images/中国客厅_03.jpg" alt="">
+                      <span class="time">2018-04-27</span>
+                    </div>
+                    <div class="text">
+                      第2期：老外中国扳手挑战美 国扳手
+                    </div>
+                  </a>
+                  <a class="card" href="javascript:void(0)">
+                    <div class="image">
+                      <img src="../images/中国客厅_03.jpg" alt="">
+                      <span class="time">2018-04-27</span>
+                    </div>
+                    <div class="text">
+                      第2期：老外中国扳手挑战美 国扳手
+                    </div>
+                  </a>
+                  <a class="card" href="javascript:void(0)">
+                    <div class="image">
+                      <img src="../images/中国客厅_03.jpg" alt="">
+                      <span class="time">2018-04-27</span>
+                    </div>
+                    <div class="text">
+                      第2期：老外中国扳手挑战美 国扳手
+                    </div>
+                  </a>
+
+                </div>
+                <!-- 选集 -->
+
+
+              </div>
+
+            </div>
+            <!-- 播放视频信息 -->
+
+
+            <!-- 视频推荐 -->
+            <div class="program-recommend">
+              <h1 class="title" style="color: #E4CBCC">为您推荐</h1>
+
+              <div class="program-recommend-show-slick">
+                <a class="card" href="#">
+                  <div class="image">
+                    <img src="../images/中国客厅_07.jpg" alt="">
+                  </div>
+                  <div class="con">
+                    一带一路
+                  </div>
+                </a>
+                <a class="card" href="#">
+                  <div class="image">
+                    <img src="../images/中国客厅_07.jpg" alt="">
+                  </div>
+                  <div class="con">
+                    一带一路
+                  </div>
+                </a>
+                <a class="card" href="#">
+                  <div class="image">
+                    <img src="../images/中国客厅_07.jpg" alt="">
+                  </div>
+                  <div class="con">
+                    一带一路
+                  </div>
+                </a>
+                <a class="card" href="#">
+                  <div class="image">
+                    <img src="../images/中国客厅_07.jpg" alt="">
+                  </div>
+                  <div class="con">
+                    一带一路
+                  </div>
+                </a>
+                <a class="card" href="#">
+                  <div class="image">
+                    <img src="../images/中国客厅_07.jpg" alt="">
+                  </div>
+                  <div class="con">
+                    一带一路
+                  </div>
+                </a>
+                <a class="card" href="#">
+                  <div class="image">
+                    <img src="../images/中国客厅_07.jpg" alt="">
+                  </div>
+                  <div class="con">
+                    一带一路
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- 视频推荐End -->
+
+
+            <div class="comment-module">
+
+              <div class="comment-home">
+
+                <h1 class="comment-title">评论
+                  <span>(
+                    <i class="comment-count">60</i>)</span>
+                </h1>
+
+                <div class="user-comment">
+                  <div class="user-head" style="background: url('../images/user-placeholder.png')"></div>
+                  <div class="user-con">
+                    <!-- 判断是否有登录，没有登录在disabled -->
+                    <textarea class="disabled" name="" id="" disabled=""></textarea>
+
+                    <!-- 没有登录时显示 -->
+                    <div class="user-isLogin">
+                      <span>请先
+                        <a href="#" class="button" style="background-color: #260701;color: #fff;">登录</a> 后发表评论</span>
+                    </div>
+                    <!-- 没有登录时显示 -->
+
+                    <div class="button-wrap">
+                      <button class="button issue_button disabled" disabled="" style="background-color: #260701;color: #fff;">发表评论</button>
+                    </div>
+
+                  </div>
+                </div>
+
+
+                <div class="comment-box">
+                  <h1 class="title">全部评论</h1>
+                  <ul class="comment-list">
+
+                    <li class="list-item">
+                      <div class="user-head" style="background-image: url('../images/公益-三级_21.png')"></div>
+                      <div class="user-con">
+                        <div class="user-top">
+                          <a href="#" class="user-name">一阵风</a>
+                          <span class="time">1天前</span>
+                        </div>
+                        <div class="user-bottom">
+                          <p>
+                            中国卫视诞生于2017年11月10日，是集卫星电视、宽频网络、有线电视和影视剧制作为一体的全球性传媒集团
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="list-item">
+                      <div class="user-head" style="background-image: url('../images/公益-三级_21.png')"></div>
+                      <div class="user-con">
+                        <div class="user-top">
+                          <a href="#" class="user-name">一阵风</a>
+                          <span class="time">1天前</span>
+                        </div>
+                        <div class="user-bottom">
+                          <p>
+                            中国卫视诞生于2017年11月10日，是集卫星电视、宽频网络、有线电视和影视剧制作为一体的全球性传媒集团
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+
+                  <div class="button-wrap">
+                    <button class="ctv-button disabled">没有更多评论</button>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="promo">
+                <a href="#">
+                  <img src="../images/公益-三级_14.png" alt="">
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- 内容部分 -->
+
+      </div>
+      <!-- 内容部分 -->
+      <div class="branding-offset" style="height: 40px;background-color: #110300;position: relative;margin-top: 10px;"></div>
+
+
+    </div>
+    <!-- 频道主体 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+  <div class='footer themed-footer'>
+    <div class="container">
+      <div class="footer-code">
+        <img src="../images/关于我们_03.png" alt="">
+      </div>
+      <div class="footer-con">
+
+        <ul class="f_list">
+          <li class="first">
+            <a href="#">CHNTV中国卫视</a>
+          </li>
+          <li>
+            <a href="#">广告服务</a>
+          </li>
+          <li>
+            <a href="#">诚征英才</a>
+          </li>
+          <li>
+            <a href="#">保护隐私权 </a>
+          </li>
+          <li>
+            <a href="#">免责条款</a>
+          </li>
+          <li>
+            <a href="#">意见反馈</a>
+          </li>
+          <li>
+            <a href="#">记者证查询</a>
+          </li>
+        </ul>
+
+        <ul class="a_list">
+          <li>
+            <span>地址：广东省深圳市福田区八卦四路先科集团大院2栋东面203室</span>
+          </li>
+          <li>
+            <span>电话：0795-82864598</span>
+          </li>
+          <li>
+            <span>邮箱：454910408@qq.com</span>
+          </li>
+        </ul>
+
+        <div class="b_con">
+
+          <div class="icq">
+            CHN TV中国卫视 版权所有 备案/许可编号：京 ICP 备 17055568 号
+          </div>
+
+          <div class="footer-share">
+
+
+            <div class="bshare-custom">
+              <a title="分享到QQ好友" class="bshare-qqim" href="javascript:void(0);" style="width: 33px; height: 33px;background: url('../images/share_sprites.png') -63px -63px;"></a>
+              <a title="分享到QQ空间" class="bshare-qzone" style="width: 33px; height: 33px;background: url('../images/share_sprites.png') -116px -10px;"></a>
+              <a title="分享到微信" class="bshare-weixin" style="width: 33px; height: 33px;background: url('../images/share_sprites.png') -10px -10px;"></a>
+              <a htitle="分享到新浪微博" class="bshare-sinaminiblog" style="width: 33px; height: 33px;background: url('../images/share_sprites.png') -63px -10px;"></a>
+              <a title="分享到腾讯微博" class="bshare-qqmb" style="width: 33px; height: 33px;background: url('../images/share_sprites.png') -10px -63px;"></a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src='../js/jquery-1.11.0.js'></script>
+  <script src='../js/lazysize.js'></script>
+  <script src="../js/slick.min.js"></script>
+  <script src='../js/main.js'></script>
+
+
+  <script>
+
+    $(".ctv-show-slick").slick({
+      arrows: true,
+      slidesToShow: 6,
+      slidesToScroll: 1,
+      variableWidth: true,
+      prevArrow: "<button class='prev-button'><i class='anticon'>&#xe609;</i></button>",
+      nextArrow: "<button class='next-button'><i class='anticon'>&#xe608;</i></button>",
+      infinite: false,
+      draggable: false
+    });
+
+    $(".program-recommend-show-slick").slick({
+      arrows: true,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      variableWidth: true,
+      prevArrow: "<button class='prev-button'><i class='anticon'>&#xe609;</i></button>",
+      nextArrow: "<button class='next-button'><i class='anticon'>&#xe608;</i></button>",
+      infinite: false,
+      draggable: false
+    });
+
+
+
+
+
+  </script>
+</body>
+
+</html>

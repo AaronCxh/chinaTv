@@ -9,6 +9,10 @@
   <link rel="stylesheet" href="./css/iconfont.css">
   <link rel='stylesheet' href='./css/main.css'>
   <title>资讯-其他资讯</title>
+  <!-- 分享 -->
+  <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+  <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+  <!-- 分享 -->
 </head>
 
 <body>
@@ -362,14 +366,25 @@
           <h1 class="info--title">选择日期</h1>
 
           <div class="picker-home">
-
+            <div class="date_picker"></div>
           </div>
 
           <!-- 广告-1 -->
           <div class="info--promo">
-            <a href="#">
-              <img src="" alt="">
-            </a>
+            <div class="promo">
+              <a href="#">
+                <img src="./images/资讯-其他资讯_03.jpg" alt="">
+              </a>
+            </div>
+
+
+            <div class="promo">
+              <a href="">
+                <img src="./images/sadasd.jpg" alt="">
+              </a>
+            </div>
+
+
           </div>
           <!-- 广告-1 -->
 
@@ -1151,15 +1166,16 @@
 
   <script src='./js/jquery-1.11.0.js'></script>
   <script src='./js/lazysize.js'></script>
+  <script src="./js/date_input.js"></script>
   <script src="./js/slick.min.js"></script>
   <script src='./js/main.js'></script>
 
   <!-- <script data-main="./index.js" src="./js/require.js"></script> -->
 
   <script>
-
-
-
+    $('.date_picker').date_input({
+      show: true
+    });
 
     $(".middle-promo").slick({
       dots: false,
@@ -1170,8 +1186,6 @@
       vertical: true,
       infinite: false,
     })
-
-
 
     $(".text-promo-swiper").slick({
       dots: false,
@@ -1197,7 +1211,8 @@
       lazyLoad: 'ondemand',
       prevArrow: '<a class="slick-prev tv-slick-arrow"></a>',
       nextArrow: '<a class="slick-next tv-slick-arrow"></a>',
-    })
+    });
+
   </script>
 </body>
 
