@@ -88,7 +88,7 @@ body{
   padding: 8px 5px;
   min-height: 40px;
   line-height: 20px;
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
   font-weight: bold;
   text-decoration: none;
@@ -204,7 +204,7 @@ body{
         width: 312px;
         height: 121px;
         margin-left: 24px;
-        font-size: 18px;
+        font-size: 14px;
         line-height: 20px;
         .title{
           display: inline-block;
@@ -213,9 +213,10 @@ body{
           width: 252px;
           height: 82px;
           font-weight: bold;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          white-space: nowrap;
+          font-size: 16px;
+          // text-overflow: ellipsis;
+          // overflow: hidden;
+          // white-space: nowrap;
         }
         .itv-button{
           position: absolute;
@@ -224,7 +225,7 @@ body{
           width: 228px;
           border: none;
           background-color: white;
-          color: #cb333e;
+          color: #0757A8;
           opacity: 0.95;
           -webkit-transition: opacity 300ms;
           transition: opacity 300ms;
@@ -232,7 +233,7 @@ body{
         }
         .icon-button-play{
           font-size: 22px;
-          color: #000;
+          color:   #0656A8;
           margin-right: 10px;
           vertical-align: top;
         }
@@ -249,8 +250,7 @@ body{
           line-height: 40px;
           font-size: 16px;
           background-color: white;
-          color: #000;
-          font-weight: bold;
+          color: #1F7AC2;
         }
         .time-label{
           display: inline-block;
@@ -258,8 +258,9 @@ body{
           height: 100%;
           line-height: 40px;
           font-size: 16px;
-          color: #000;
-          background-color: #c9c9ca;
+          color: #fff;
+
+          background-color: #3979B9;
         }
       }
     }
@@ -300,8 +301,7 @@ body{
           line-height: 40px;
           font-size: 16px;
           background-color: white;
-          color: #000;
-          font-weight: bold;
+          color: #0757A8;
         }
         .time-label{
           display: inline-block;
@@ -309,8 +309,8 @@ body{
           height: 100%;
           line-height: 40px;
           font-size: 16px;
-          color: #000;
-          background-color: #c9c9ca;
+          color: #fff;
+          background-color: #3979b9;
         }
 
       }
@@ -330,9 +330,10 @@ body{
           width: 252px;
           height: 82px;
           font-weight: bold;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          white-space: nowrap;
+          font-size: 16px;
+          // text-overflow: ellipsis;
+          // overflow: hidden;
+          // white-space: nowrap;
         }
       }
 
@@ -509,6 +510,9 @@ body{
   font-size: 12px;
   color: #BBD7ED;
   display: none;
+  .hover-panel{
+    white-space: nowrap;
+  }
   .anticon{
     color: #BBD7ED;
     font-size: 12px;
@@ -561,16 +565,27 @@ body{
     display: table;
     clear: both;
   }
+  &:hover{
+    > li > a{
+      opacity: 0.5;
+    }
+  }
   > li{
     float: left;
     padding: 0 15px;
     line-height: 109px;
+    &:hover{
+      > a{
+        opacity: 1;
+      }
+    }
     > a{
       display: inline-block;
       font-size: 16px;
       color: #1B1B1B;
       font-family:MicrosoftYaHei;
       line-height: 1.4;
+     
     }
   }
   > li.active{
@@ -604,7 +619,7 @@ body{
   }
 }
 .header-search{
-  margin-top: 40px;
+  margin-top: 36px;
   float: right;
   position: relative;
   width:200px;
@@ -632,7 +647,7 @@ body{
   }
 }
 .down-sub-menu{
-  padding: 30px 0 50px;
+  padding: 30px 0 26px;
   overflow: hidden;
   li{
     float: left;
@@ -1805,6 +1820,7 @@ table{
     font-family:MicrosoftYaHei-Bold;
     text-align: center;
     margin-bottom: 20px;
+    color: #fff;
     em{
       color: #1F7AC2;
     }
@@ -2017,7 +2033,6 @@ a:focus{
     margin:  67px 0 26px;
     img{
       vertical-align: bottom;
-      margin-right: 10px;
     }
   }
   .ctv_image{
@@ -2429,8 +2444,13 @@ a:focus{
     position: absolute;
     top: 0;
     img{
+      animation: fade-in 1.5s;
       display: block;
       margin: 0 auto;
+      position:relative;
+      opacity:0;
+      -webkit-animation-fill-mode:both;
+      animation-fill-mode:both
     }
   }
   .branding-frame{
@@ -2473,7 +2493,7 @@ header.page-title{
   }
   .page-menu{
     float: right;
-    margin-top: 54px;
+    margin-top: 58px;
     &:hover{
       li{
         opacity: 0.5;
@@ -2504,6 +2524,8 @@ header.page-title{
         text-transform: uppercase;
         letter-spacing: 0.99px;
         padding: 3px;
+        line-height: 1;
+        font-weight: bold;
       }
     }
   }
@@ -3038,7 +3060,7 @@ header.page-title{
     background: none;
     position: absolute;
     top: 50%;
-    margin-top: -11px;
+    margin-top: -34px;
     .anticon{
       font-size: 22px;
     }
@@ -3102,11 +3124,21 @@ header.page-title{
   padding: 42px  24px;
   > .title{
     font-size: 24px;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
+    font-family:MicrosoftYaHei-Bold;
   }
 }
 
 .program-recommend-show-slick{
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+  &.slick-initialized{
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+  }
   .slick-list{
     width: 1130px;
     margin: 0 auto;
@@ -3172,6 +3204,11 @@ header.page-title{
   .nav{
     float: left;
     margin-top: 32px;
+    li.active{
+      a{
+        text-decoration: underline;
+      }
+    }
     li{
       float: left;
       margin-right: 18px;
@@ -3188,7 +3225,16 @@ header.page-title{
 
 
 .moliVideo-page-slick{
+  height:0;
+  overflow: hidden;
+  opacity: 0;
   z-index: 2;
+  transition: all 0.5s;
+  &.slick-initialized {
+    opacity: 1;
+    height: auto;
+    visibility: visible;
+  }
   .card{
     width: 1024px;
     height: 465px;
@@ -3283,6 +3329,9 @@ header.page-title{
       font-family:MicrosoftYaHei-Bold;
       width: 1200px;
       margin: 0 auto 20px;
+      a{
+        color: #fff;
+      }
     }
 
   }
@@ -3606,34 +3655,171 @@ header.page-title{
 
 
 .hero-showTime{
-  height: 290px;
   .showTime-slick{
     position: relative;
     width: 100%;
-    background: #0081c9;
+    background-color: #1f7ac2;
+    font-size: 0;
     overflow: hidden;
-    .card{
-      display: block;
-      position: relative;
-      width: 14%;
-      float: left;
-      overflow: hidden;
-      background: #0081c9;
-      padding: 10px;
-      display: inline;
-      overflow: hidden;
-      transition: all 0.2s;
-      height: 300px;
-      border-left: 1px solid #fff;
-      border-right: 1px solid #fff;
-      color: #fff;
-      opacity: 0.85;
-    }
-    .card.active{
-      background: #fff;
-      color: #003ca6;
-      pointer-events: none;
+    height: 0;
+    opacity: 0;
+    transition: all 0.3s 1s;
+    &.slick-initialized{
+      height: auto;
+      overflow: visible;
       opacity: 1;
     }
+    .status{
+
+    }
+    .card{
+      position: relative;
+      display: inline-block;
+      margin: 0;
+      height: 280px;
+      width: 252px;
+      overflow: hidden;
+      background-color: #0757a8;
+      border-right: 1px solid rgba(255,255,255,0.2);
+      opacity: 0.8;
+      cursor: pointer;
+      -webkit-transition: all 200ms;
+      transition: all 200ms;
+      .title{
+        position: absolute;
+        top: 130px;
+        font-size: 16px;
+        color: #fff;
+        font-family: MicrosoftYaHei-Bold;
+        width: 203px;
+        left: 24px;
+        max-height: 63px;
+        overflow: hidden;
+        font-weight: bold;
+      }
+      &:hover{
+        opacity: 1;
+      }
+    }
+    .card.now{
+      opacity: 1;
+      .card-time{
+        background: #fff;
+        color: #0757a8;
+      }
+      .status{
+        position: absolute;
+        width: 150px;
+        left: 80px;
+        top: 0;
+        background: #3979BA;
+        color: #fff;
+      }
+    }
+    .card.now ~ .card{
+      background-color: #1f7ac2;
+      cursor: default;
+    }
+    .card.now + .card{
+      opacity: 1;
+      .card-time{
+        background: #fff;
+        color: #0757a8;
+      }
+      .status{
+        position: absolute;
+        width: 150px;
+        left: 80px;
+        top: 0;
+        background: #3979BA;
+        color: #fff;
+      }
+    }
+    .card-time{
+      display: block;
+      margin-left: 22px;
+      width: 60px;
+      height: 40px;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 40px;
+      color: white;
+      text-align: center;
+    }
+    .card-image{
+      position: relative;
+      margin-left: 22px;
+      height: 81px;
+      width: 144px;
+      .anticon{
+        position: absolute;
+        color: #fff;
+        right: 6px;
+        bottom: 6px;
+      }
+      img{
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+      }
+    }
+    .card-footer{
+      position: absolute;
+      margin: auto;
+      right: 0;
+      bottom: 20px;
+      left: 0;
+      width: 208px;
+      border-radius: 2px;
+      font-size: 14px;
+      color: #0757a8;
+      background-color: #c4d2de;
+      border: none;
+      z-index: 1;
+      font-weight: bold;
+      font-family:MicrosoftYaHei-Bold;
+      height: 40px;
+      .anticon{
+        display: inline-block;
+        vertical-align: text-bottom;
+      }
+    }
+  }
+}
+.hero-showTime + .middle-promo-panel{
+  margin-top:0;
+}
+
+.showTime-slick:hover{
+  .tv-slick-arrow{
+    opacity: 0.4;
+    &:hover{
+      opacity: 1;
+    }
+  }
+}
+
+
+
+.animated {
+  // position:relative;
+  opacity:0;
+  animation-fill-mode:both
+}
+.fadeIn{
+  animation-name:fade-in;
+}
+@keyframes fade-in {
+  0% {
+      opacity:0
+  }
+  100% {
+      opacity:1
   }
 }
