@@ -1532,6 +1532,8 @@ table{
 }
 
 .promo-swiper{
+  height: 567px;
+  overflow: hidden;
   .slick-dots{
     bottom: 14px;
     li{
@@ -2191,6 +2193,7 @@ a:focus{
   }
 }
 .info--main{
+  position: relative;
   margin-top: 37px;
   .info--content{
     float: left;
@@ -3627,6 +3630,7 @@ header.page-title{
 
 .picker-home{
   margin-bottom: 20px;
+  height: 293px;
 }
 .info--promo{
   .promo{
@@ -3669,9 +3673,7 @@ header.page-title{
       overflow: visible;
       opacity: 1;
     }
-    .status{
 
-    }
     .card{
       position: relative;
       display: inline-block;
@@ -3838,17 +3840,18 @@ header.page-title{
 
 
 .news-show-panel{
+  width: 1004px;
+  margin: 0 auto;
   .news-show--title{
     font-size: 30px;
     color: #05519d;
     text-align: center;
-    width: 1004px;
-    margin: 10px auto;
-
+  }
+  .show-panel-info-share{
+    float: left;
   }
   .player-wrapper{
     position: relative;
-    height: 630px;
     width: 1004px;
     margin: 0 auto;
     z-index: 2;
@@ -3858,38 +3861,255 @@ header.page-title{
       background: #000;
       width: 100%;
     }
-    .show-panel-info{
-      position: static;
+
+
+  }
+  .show-panel-info{
+    position: static;
+  }
+  .description{
+    margin: 0;
+    font-size: 20px;
+    line-height: 20px;
+    color: white;
+    height: 73px;
+    .num{
+      display: inline-block;
+      width: 165px;
+      height: 100%;
+      float: left;
+      line-height: inherit;
+      text-align: center;
+      background-color: #257fc7;
+      line-height: 75px;
     }
-    .description{
+    .text{
       margin: 0;
-      font-size: 20px;
-      line-height: 20px;
-      color: white;
-      height: 73px;
-      .num{
-        display: inline-block;
-        padding-top: 10px;
-        width: 165px;
-        height: 100%;
-        float: left;
-        line-height: inherit;
-        text-align: center;
-        background-color: #257fc7;
-      }
-      .text{
-        margin: 0;
-        padding-top: 10px;
-        padding-left: 20px;
-        padding-right: 20px;
-        overflow: hidden;
-        height: 100%;
-        line-height: inherit;
-        font-size: inherit;
-        background-color: #05519d;
+      padding-top: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      overflow: hidden;
+      height: 100%;
+      line-height: inherit;
+      font-size: inherit;
+      background-color: #05519d;
+    }
+  }
+}
+
+.news--showTime-slick{
+  width: 100%;
+  background: #0081c9;
+  overflow: hidden;
+  height: 0;
+  opacity:0;
+  overflow:hidden;
+  transition: opacity 0.3;
+  &.slick-initialized{
+    height: auto;
+    opacity: 1;
+    overflow: visible;
+  }
+  &:hover{
+    .tv-slick-arrow{
+      opacity: 0.4;
+      &:hover{
+        opacity: 1;
       }
     }
   }
+  .card{
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    text-decoration: none;
+    padding: 3px 0;
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    background-color: #0764ad;
+    color: white;
+    outline: none;
+    transition: opacity 200ms;
+    opacity: 0.85;
+    margin: 0 1px 0 0;
+    &.active{
+      background-color: #fff;
+      color: #0764ad;
+      opacity: 1;
+      .info{
+        color: #fff;
+      }
+    }
+    &:hover{
+      opacity: 1;
+    }
+    .image{
+      display: block;
+      width: 220px;
+      height: 124px;
+      margin: 14px 8px 0;
+      background-color: black;
+      overflow: hidden;
+    }
+    .summary{
+      // line-height: 25px;
+      // margin-top: 5px;
+      // max-height: 125px;
+      // overflow: hidden;
+      font-size: 16px;
+      padding: 17px;
+      height: 125px;
+      overflow: hidden;
+    }
+    .info{
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: #00b2e2;
+      font-size: 16px;
+      line-height: 1;
+      padding: 5px 0 3px;
+      width: 60px;
+      text-align: center;
+    }
+  }
+}
+
+.lastdiv-news-wrapper{
+  width: 987px;
+  margin: 0 auto;
+  .news-title{
+    color: #0f529c;
+    font-size: 24px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+  }
+  .last-news-list{
+    overflow: hidden;
+    margin: 0 -12px;
+    > li{
+      float: left;
+      padding: 0 12px;
+      margin-bottom: 24px;
+      .card{
+        display: block;
+        position: relative;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        height: 400px;
+        width: 100%;
+        padding: 10px 12px;
+        opacity: 0.9;
+        transition: opacity 0.3s;
+        width: 312px;
+        &:hover{
+          opacity: 1;
+        }
+        .image{
+          height: 170px;
+          overflow: hidden;
+          img{
+            width: auto;
+            height: 100%;
+          }
+        }
+        .card-title{
+          color: $bodycolor;
+          font-size: 14px;
+          margin: 5px 0;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+        .summary{
+          position: relative;
+          font-size: 14px;
+          color: #000;
+          overflow: hidden;
+          height: 175px;
+          &:after{
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 0;
+            box-shadow: 0 0 20px 20px #fff;
+            left: 0;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+  .ctv-button{
+    border-color: #0757a8;
+    background-color: #0757a8;
+    color: #fff;
+    &:hover{
+      background-color: #0757a8 - 20;
+    }
+  }
+  .promo{
+    position: relative;
+    display: block;
+    width: 312px;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+    .box{
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+    }
+    .title{
+      position: absolute;
+      color: #fff;
+      font-size: 16px;
+      top: 106px;
+      left: 25px;
+      width: 224px;
+    }
+    .summary{
+      position: absolute;
+      color: #fff;
+      font-size: 14px;
+      top: 136px;
+      left: 25px;
+      width: 224px;
+      height: 76px;
+      overflow: hidden;
+    }
+  }
+}
+
+.scroll-top{
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  background-image: url("../images/scroll-top-41e961f3f964d5a856ff05d8bb9de117.png");
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/scroll-top-41e961f3f964d5a856ff05d8bb9de117.png',sizingMethod='scale');
+  background-color: rgba(255,255,255,0.8);
+  background-size: 30px 30px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 2px solid #a2aeba;
+  opacity: 0.8;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  z-index: 10;
 }
 
 .animated {

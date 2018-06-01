@@ -73,13 +73,13 @@
   $(window).scroll(function () {
     var scrollTop = $(window).scrollTop();
     if (scrollTop >= 100) {
-      $(".fixation-box").fadeIn(200)
+      $(".scroll-top").fadeIn(200)
     } else {
-      $(".fixation-box").fadeOut(200);
+      $(".scroll-top").fadeOut(200);
     }
   });
 
-  $(".returnTop").click(function (e) {
+  $(".scroll-top").click(function (e) {
     e.preventDefault();
     $("body,html").animate({
       scrollTop: 0
@@ -273,9 +273,39 @@
 
   })
 
-  $(".js-search-button").on("click",function(){
+  $(".js-search-button").on("click", function () {
     $(this).toggleClass("js-open");
     $(".js-search-wrapper").toggleClass("open");
   })
 
 })();
+
+
+
+!(function () {
+  
+  var offsetTop = $(".info--promo").offset().top;
+  var Top = $(".info--content").offset().top + $(".info--content").height() - $(".info--promo").height();
+  $(window).scroll(function () {
+    
+    if ($(".info--content").height() < $(".info--aside").height()) {
+      return false;
+    } else if ($(window).scrollTop() >= Top) {
+      $(".info--promo").css({
+        position: "absolute",
+        bottom: -20,
+        top: "auto"
+      })
+    } else if ($(window).scrollTop() >= offsetTop) {
+      $(".info--promo").css({
+        position: "fixed",
+        // top:61,
+        top: 20
+      })
+    } else {
+      $(".info--promo").css({
+        position: "static"
+      })
+    }
+  })
+})()
