@@ -10,6 +10,7 @@ const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 var paths = {
     sass: ['./scss/main.scss'],
+    past: ['./scss/past.scss'],
 };
 
 
@@ -41,8 +42,19 @@ gulp.task("sass",function(){
     .pipe( postcss([require('precss'),require('autoprefixer')({browsers: ["last 7 versions","IE >= 8"]})]))    
     .pipe( csso())
     .pipe(gulp.dest("./css"))
-})
+});
+
+gulp.task("past",function(){
+  gulp.src(paths.past)
+  .pipe(sass())
+  .on("error",sass.logError)
+  .pipe( postcss([require('precss'),require('autoprefixer')({browsers: ["last 7 versions","IE >= 8"]})]))    
+  .pipe( csso())
+  .pipe(gulp.dest("./css"))
+});
 gulp.task('watch', function() {
     gulp.watch(paths.sass, ['sass']);
+    gulp.watch(paths.past, ['past']);
+    
 });
 gulp.task("default",["css","testImagemin"])

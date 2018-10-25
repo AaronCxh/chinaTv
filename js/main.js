@@ -284,6 +284,7 @@
 
 !(function () {
   
+  if(!$(".info--promo").length){return}
   var offsetTop = $(".info--promo").offset().top;
   var Top = $(".info--content").offset().top + $(".info--content").height() - $(".info--promo").height();
   $(window).scroll(function () {
